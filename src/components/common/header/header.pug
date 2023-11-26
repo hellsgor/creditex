@@ -1,0 +1,25 @@
+mixin header()
+  .header()&attributes(attributes)
+    .container
+      .header__row
+        a.header__logo(href='/')
+          include Images/logo.pug
+        nav.header__main-menu
+          ul.header__main-menu-list
+            include Components/common/header/main-menu-item/main-menu-item.pug
+            +main-manu-item({
+              text: 'Главная',
+              href: '#'
+            }, 'header')(class = 'header__main-menu-item-link header__main-menu-item-link_this-page')
+            +main-manu-item({
+              text: 'Предпринимателям',
+              href: '#'
+            }, 'header')(class = 'header__main-menu-item-link')
+            +main-manu-item({
+              text: 'Партнерам',
+              href: '#'
+            }, 'header')(class = 'header__main-menu-item-link')
+        .header__lk-buttons
+          include UIKit/button/button.pug
+          +button('header-lk-entry', '#', '', 'link', 'Войти', 'entry')(class='header__lk-entry-button')
+          +button('lets-start', '', 'button', 'primary', 'Начать')(class='header__lets-start-button')
