@@ -1,0 +1,17 @@
+@import 'Styles/styles';
+@import 'Components/common/header/header';
+@import 'Components/common/footer/footer';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.page__main {
+  flex: 1 0 auto;
+}
