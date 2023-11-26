@@ -2,7 +2,7 @@ extends Layouts/ui-kit-layout/ui-kit-layout.pug
 
 block variables
   - let title = 'UI-kit';
-  - let pageClassName = 'UI-kit';
+  - let pageClassName = 'ui-kit';
 
 block styles
   link(href=require('./ui-kit.scss') rel='stylesheet')
@@ -10,18 +10,18 @@ block scripts
   script(src=require('./ui-kit.js') defer)
 
 block content
-  main.page__main(class=pageClassName)
-    .container
-      h1 UI-kit
 
-      h2 Button
-      .ui-kit__component-container.ui-kit__component-container_gorizontal
-        include UIKit/button/button.pug
-        +button('test-button-primary', '', 'button', 'primary', 'Primary')
-        +button('test-button-secondary', '', 'button', 'secondary', 'Secondary')
-        +button('test-button-primary-disabled', '', 'button', 'primary', 'Disabled Primary')(disabled)
-        +button('test-button-secondary-disabled', '', 'button', 'secondary', 'Disabled Secondary')(disabled)
-        +button('test-button-transparent', '', 'button', 'transparent', 'Transparent Button')
-        +button('test-button-transparent-disabled', '', 'button', 'transparent', 'Disabled Transparent Button')(disabled)
-        +button('test-button-link', '#', '', 'link', 'Looks like a link')
+  .container
+    h1 UI-kit
+
+    h2 Button
+    .ui-kit__component-container.ui-kit__component-container_gorizontal
+      include UIKit/button/button.pug
+      +button('test-button-primary', '', 'button', 'primary', 'Primary')
+      +button('test-button-secondary', '', 'button', 'secondary', 'Secondary')
+      +button('test-button-primary-disabled', '', 'button', 'primary', 'Disabled Primary')(disabled)
+      +button('test-button-secondary-disabled', '', 'button', 'secondary', 'Disabled Secondary')(disabled)
+      +button('test-button-transparent', '', 'button', 'transparent', 'Transparent Button')
+      +button('test-button-transparent-disabled', '', 'button', 'transparent', 'Disabled Transparent Button')(disabled)
+      +button('test-button-link', '#', '', 'link', 'Looks like a link')
 
