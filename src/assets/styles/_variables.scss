@@ -54,3 +54,7 @@ $radius: 24px;
 $shadow-1: 0px 1px 11px 0px rgba(0, 0, 0, 0.05);
 $shadow-yellow-green-round: 0px 0px 15px 16px rgba(220, 244, 114, 0.47);
 $shadow-active-tab: 0px 0px 43px 0px rgba(0, 0, 0, 0.07);
+
+// transitions
+$transition-default-duration: .3s;
+$transition-default-timing-func: ease-in-out;
