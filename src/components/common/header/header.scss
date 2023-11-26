@@ -1,6 +1,7 @@
 @import 'UIKit/button/button.scss';
 
 .header {
+  margin-bottom: 88px;
   background-color: $light-gray;
   @include shadow($shadow-1);
 
