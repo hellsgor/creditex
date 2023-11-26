@@ -1,1 +1,27 @@
 @import 'Layouts/main-layout.scss';
+
+@import 'UIKit/button/button.scss';
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 60px;
+  margin-bottom: 16px;
+}
+
+.ui-kit {
+  &__component-container {
+    display: flex;
+    gap: 32px;
+
+    &_vertical {
+      flex-direction: column;
+    }
+
+    &_gorizontal {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}

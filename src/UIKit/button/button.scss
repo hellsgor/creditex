@@ -1,0 +1,59 @@
+@mixin transparent-button {
+  border: none;
+  background-color: transparent;
+  color: $black-1;
+}
+
+.button {
+  width: fit-content;
+  height: fit-content;
+  min-height: 50px;
+  padding: 16px 24px;
+  outline: none;
+  border: 1px solid $black-2;
+  border-radius: $radius-small;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+
+  &_primary {
+    background-color: $black-2;
+    color: $white-1;
+
+    &:disabled {
+      border-color: $gray-12;
+      background-color: $gray-12;
+    }
+  }
+
+  &_secondary {
+    border-color: $black-1;
+    background-color: transparent;
+    color: $black-1;
+
+    &:disabled {
+      border-color: $gray-12;
+      color: $gray-12;
+    }
+  }
+
+
+  &_transparent {
+    @include transparent-button;
+
+    &:disabled {
+      color: $gray-12;
+    }
+  }
+
+  &_link {
+    display: flex;
+    min-height: unset;
+    padding: 0;
+    align-items: center;
+    column-gap: 4px;
+    @include transparent-button;
+  }
+
+
+}

@@ -1,5 +1,5 @@
 const path = require('path');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const PugPlugin = require('pug-plugin');
 
@@ -46,7 +46,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      Img: path.join(__dirname, './src/assets/images/'),
+      Images: path.join(__dirname, './src/assets/images/'),
       Icons: path.join(__dirname, './src/assets/icons/'),
       Fonts: path.join(__dirname, './src/assets/fonts/'),
       Components: path.join(__dirname, './src/components/'),

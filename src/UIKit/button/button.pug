@@ -1,0 +1,12 @@
+mixin button(buttonID, href, buttonType, visualType, buttonText, iconName='')
+  if href
+    a.button(
+      class='button_' + visualType,
+      href=href)&attributes(attributes) #{buttonText}
+      if iconName === 'entry'
+        include Icons/entry.pug
+  else
+    button.button(
+      class='button_' + visualType,
+      type=buttonType,
+      id=buttonID)&attributes(attributes) #{buttonText}
