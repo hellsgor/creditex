@@ -8,7 +8,9 @@ block variables
 
 block styles
   link(href=require('./main.scss') rel='stylesheet')
-block content
 
 block scripts
   script(src=require('./main.js') defer)
+
+block content
+  include Components/offer/offer.pug
