@@ -39,6 +39,7 @@ module.exports = {
     port: 3000,
     watchFiles: [
       './src/pages/**/*.*',
+      './src/layouts/*.*',
       './src/components/**/*.*',
       './src/assets/common/*.*',
       './src/UIKit/**/*.*',
