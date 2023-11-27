@@ -1,0 +1,9 @@
+mixin form-control(inputType, inputName, placeholder)
+  .form-control
+    input.form-control__input(
+      type=inputType,
+      id=inputName,
+      name=inputName,
+      placeholder=placeholder)&attributes(attributes)
+    include UIKit/form-control-error/form-control-error.pug
+    +form-control-error()(class='form-control__error')
