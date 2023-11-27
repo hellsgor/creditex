@@ -18,5 +18,7 @@ module.exports = {
     'no-iterator': 0,
     'no-restricted-syntax': [2, 'WithStatement'],
     'func-style': 0,
+    'import/no-unresolved': 'off',
+    'import/prefer-default-export': ['off', { target: 'single' }],
   },
 };
