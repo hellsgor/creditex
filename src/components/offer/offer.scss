@@ -1,0 +1,64 @@
+.offer {
+  background-color: $olive-gray;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  padding: 90px 90px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 60px;
+
+  &__left-wrapper {
+    flex: 0 1 815px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 53px;
+  }
+
+  &__right-wrapper {
+    flex: 0 1 774px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__text {
+    row-gap: 32px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      color: $black-1;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 27px;
+      color: $gray-1;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    max-width: 563px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__input {
+    width: 459px;
+  }
+
+  &__round {
+    width: 596px;
+    height: 596px;
+    background-color: $yellow-green-1;
+    border-radius: 596px;
+    @include shadow($shadow-yellow-green-round);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}
