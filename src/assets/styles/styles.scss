@@ -12,3 +12,11 @@
   max-width: 1780px;
   margin: 0 auto;
 }
+
+.section {
+  &__wrapper {
+    border-radius: $radius;
+    overflow: hidden;
+
+  }
+}

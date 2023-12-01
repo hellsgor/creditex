@@ -1,0 +1,60 @@
+.about-platform {
+  &__wrapper {
+    background-color: $white-1;
+    padding: 147px 141px 192px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 37px;
+    position: relative;
+
+    h2,
+    p {
+      max-width: 749px;
+    }
+
+    h2 {
+      color: $black-3;
+    }
+
+    p {
+      font-size: 30px;
+      color: $gray-2;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    width: 895px;
+    height: 895px;
+    background-color: $yellow-green-1;
+    border-radius: 100%;
+    right: -103px;
+    top: -191px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__card {
+    position: absolute;
+
+
+    &_left {
+      top: 235px;
+      left: 67px;
+
+      img {
+        width: 386px;
+      }
+    }
+
+    &_right {
+      top: 224px;
+      right: 132px;
+      z-index: 1;
+
+      img {
+        width: 397px;
+      }
+    }
+  }
+}
