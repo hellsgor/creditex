@@ -1,8 +1,10 @@
 .offer {
+  margin-bottom: 0;
+
   &__wrapper {
     background-color: $olive-gray;
-    border-top-left-radius: $radius;
-    border-top-right-radius: $radius;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     padding: 90px 90px 22px;
     display: flex;
     justify-content: space-between;
