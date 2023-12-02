@@ -1,9 +1,8 @@
 .register-oneself {
-  &__container {
+  &__wrapper {
     display: flex;
     padding-top: 31px;
     padding-bottom: 31px;
-    border-radius: $radius;
     align-items: center;
     justify-content: center;
     background-color: $olive-gray;
