@@ -16,4 +16,15 @@ body {
 
 .page__main {
   flex: 1 0 auto;
+
+  .section {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__wrapper {
+      border-radius: $radius;
+      overflow: hidden;
+    }
+  }
 }
