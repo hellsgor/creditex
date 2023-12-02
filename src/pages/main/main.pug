@@ -19,3 +19,19 @@ block content
 
   include Components/how-it-work/how-it-work.pug
   +howItWork('small')
+
+  include Components/advantages-numbers/advantages-numbers.pug
+  +advantagesNumbers('', [
+    {
+      title: '800 сделок',
+      description: 'Более 800 успешных сделок',
+    },
+    {
+      title: '3 млрд',
+      description: 'Выдано более 3 млрд рублей',
+    },
+    {
+      title: '74',
+      description: 'Кредитных организаций',
+    },
+  ])
