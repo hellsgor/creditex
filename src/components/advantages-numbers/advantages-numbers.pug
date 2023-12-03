@@ -1,7 +1,8 @@
 mixin advantagesNumbers(title, advantages)
   section.section.advantages-numbers
     .container
-      .section__wrapper.advantages-numbers__wrapper.advantages-numbers__wrapper_smaller-paddings
+      .section__wrapper.advantages-numbers__wrapper&attributes(
+        attributes)
         if title
           h3 #{title}
         .advantages-numbers__advantages.advantages-numbers__advantages_big-font-size
