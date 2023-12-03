@@ -1,0 +1,9 @@
+extends Components/advantage/advantage.pug
+
+block advantage-body
+  .advantage__icon
+    include Components/svg-icon/svg-icon.pug
+    +svgIcon(advantageProps.iconName)
+  h4 #{advantageProps.title}
+  each paragraph in advantageProps.paragraphs
+    p #{paragraph}
