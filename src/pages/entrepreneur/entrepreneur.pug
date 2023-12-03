@@ -15,3 +15,28 @@ block scripts
 block content
   include Components/offer/offer.pug
   include Components/card-issued-block/card-issued-block.pug
+
+  include Components/advantages/advantages.pug
+  +advantages('', {
+    title: 'Сотрудничество с нами - удобство и выгода.',
+    paragraphs: ['Сотрудничество с нами - удобство и выгода. Наши инструменты легки в использовании и настраиваются под ваши потребности. Благодаря партнерской сети, мы быстро подбираем финансовые продукты для каждого клиента.']
+  }, [
+    {
+      iconName: 'page',
+      title: 'Прозрачность',
+      paragraphs: ['Регламентированный процесс работы'],
+      bordered: true,
+    },
+    {
+      iconName: 'speed',
+      title: 'Скорость',
+      paragraphs: ['Быстрый подбор более 5* кредитных продуктов'],
+      bordered: true,
+    },
+    {
+      iconName: 'credit-card',
+      title: 'Нацеленность на клиента',
+      paragraphs: ['Индивидуальный подбор кредитных программ под Ваши задачи'],
+      bordered: true,
+    },
+  ])(class='advantages__wrapper_paddings-62-74')
