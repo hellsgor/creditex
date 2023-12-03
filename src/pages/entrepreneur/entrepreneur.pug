@@ -1,0 +1,15 @@
+extends Layouts/public-pages-layout/public-pages-layout.pug
+
+block variables
+  - let title = 'Entrepreneur';
+  - let header = true;
+  - let footer = true;
+  - let pageClassName = 'entrepreneur-page';
+
+block styles
+  link(href=require('./entrepreneur.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./entrepreneur.js') defer)
+
+block content

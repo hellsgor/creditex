@@ -9,6 +9,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/pages/main/main.pug',
+    entrepreneur: './src/pages/entrepreneur/entrepreneur.pug',
     uiKit: './src/pages/ui-kit/ui-kit.pug',
   },
   output: {
