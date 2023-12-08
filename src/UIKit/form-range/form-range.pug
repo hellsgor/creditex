@@ -1,0 +1,17 @@
+mixin form-range(rangeName, rangeLabelText, min, max, postffix, startValue)
+  .range
+    .range__input
+      label.range__lable(for=rangeName) #{rangeLabelText}
+      include UIKit/form-control/form-control.pug
+      +form-control('number', `input-range-${rangeName}`, '')(min = min,  max = max, data-start-value = startValue, data-pluralize-one = postffix.one, data-pluralize-two = postffix.two, data-pluralize-five = postffix.five)
+      .range__control
+        .range__custom-track
+        input(type='range', min = min,  max = max)
+    .range__numbers-wrapper
+      .range__min-wrapper.range__extreme-value
+        span.range__min #{min}
+        span.range__postfix #{postffix.one}
+      .range__max-wrapper.range__extreme-value
+        span.range__max #{max}
+        span.range__postfix #{postffix.one}
+
