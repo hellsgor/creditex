@@ -1,0 +1,26 @@
+@import 'Components/annuity-calculator/annuity-calculator.sass';
+
+.annuity-calculator-block {
+  &__wrapper {
+    padding: 150px 68px 216px;
+
+    & > h4 {
+      margin-bottom: 24px;
+      font-size: 35px;
+      text-align: center;
+      color: $black-1;
+    }
+
+    & > span {
+      display: block;
+      width: fit-content;
+      margin-left: auto;
+      font-size: 18px;
+      color: $black-1;
+    }
+  }
+
+  &__calculator {
+    margin-bottom: 14px;
+  }
+}
