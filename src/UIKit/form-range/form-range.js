@@ -1,6 +1,6 @@
 import { getLocaleString } from 'UIKit/form-range/_get-locale-string';
 import { pluralizer } from 'pluralizer-for-js';
-import { getCustomTrackWidth } from 'UIKit/form-range/_get-custom-track-width';
+import { changeAfterChangingControlValue } from 'UIKit/form-range/_change-after-changing-control-value';
 
 const ranges = document.querySelectorAll('.range');
 
@@ -25,11 +25,7 @@ ranges.forEach((range) => {
     inputRange.value = inputRange.dataset.startValue;
   }
 
-  inputText.value = getLocaleString(
-    inputRange.value,
-    inputRange.dataset.isYears === 'true',
-  );
-  customTrack.style.width = getCustomTrackWidth(inputRange);
+  changeAfterChangingControlValue(inputRange, inputText, customTrack);
 
   range.querySelectorAll('.range__postfix').forEach((postfix) => {
     postfix.textContent = pluralizer(
@@ -45,11 +41,9 @@ ranges.forEach((range) => {
     );
   });
 
-  inputRange.addEventListener('input', () => {
-    inputText.value = getLocaleString(
-      inputRange.value,
-      inputRange.dataset.isYears === 'true',
-    );
-    customTrack.style.width = getCustomTrackWidth(inputRange);
+  ['input', 'change'].forEach((eventType) => {
+    inputRange.addEventListener(eventType, () => {
+      changeAfterChangingControlValue(inputRange, inputText, customTrack);
+    });
   });
 });
