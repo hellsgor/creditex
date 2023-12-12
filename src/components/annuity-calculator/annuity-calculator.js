@@ -1,67 +1,27 @@
-import { changedPaymentControl } from 'Components/annuity-calculator/_changed-payment-control';
-import { calcAnnuityPayments } from 'Components/annuity-calculator/_calc-annuity-payments';
+import { preparePaymentControlValue } from 'Components/annuity-calculator/_prepare-payment-control-value';
+import { handleInputChange } from 'Components/annuity-calculator/_handle-input-change';
+import { CONSTANTS } from 'Constants/constants';
 
-const annualInterestRate = 9;
+const controls = {
+  amountControl: document.getElementById(CONSTANTS.rangeControls.amountNameID),
+  paymentControl: document.getElementById(
+    CONSTANTS.rangeControls.paymentNameID,
+  ),
+  termControl: document.getElementById(CONSTANTS.rangeControls.termNameID),
+};
 
-const amountNameID = 'range-control-calculator-amount';
-const paymentNameID = 'range-control-calculator-payment';
-const termNameID = 'range-control-calculator-term';
-
-const amountControl = document.getElementById(amountNameID);
-const paymentControl = document.getElementById(paymentNameID);
-const termControl = document.getElementById(termNameID);
-
-let calcAnnuityPaymentsResult = calcAnnuityPayments(
-  amountControl.value,
-  termControl.value,
-  annualInterestRate,
+preparePaymentControlValue(
+  controls.amountControl,
+  controls.paymentControl,
+  controls.termControl,
 );
-console.log(calcAnnuityPaymentsResult);
-paymentControl.value = Number(
-  calcAnnuityPaymentsResult.payments[0].paymentAmount,
+
+[controls.amountControl, controls.paymentControl, controls.termControl].forEach(
+  (control) => {
+    if (control) {
+      control.addEventListener('input', (event) => {
+        handleInputChange(event, controls);
+      });
+    }
+  },
 );
-paymentControl.dispatchEvent(new Event('change'));
-
-[amountControl, paymentControl, termControl].forEach((control) => {
-  if (control) {
-    // eslint-disable-next-line no-use-before-define
-    control.addEventListener('input', handleInputChange);
-  }
-});
-
-function handleInputChange(event) {
-  calcAnnuityPaymentsResult = calcAnnuityPayments(
-    amountControl.value,
-    termControl.value,
-    annualInterestRate,
-  );
-
-  switch (event.target.name) {
-    case amountNameID:
-      paymentControl.value = calcAnnuityPayments(
-        amountControl.value,
-        termControl.value,
-        annualInterestRate,
-      ).payments[0].paymentAmount;
-      paymentControl.dispatchEvent(new Event('input'));
-      break;
-    case paymentNameID:
-      changedPaymentControl(
-        event.target.value,
-        amountControl,
-        termControl,
-        annualInterestRate,
-      );
-      break;
-    default:
-      paymentControl.value = calcAnnuityPayments(
-        amountControl.value,
-        termControl.value,
-        annualInterestRate,
-      ).payments[0].paymentAmount;
-      paymentControl.dispatchEvent(new Event('input'));
-      break;
-  }
-
-  console.log(calcAnnuityPaymentsResult);
-}

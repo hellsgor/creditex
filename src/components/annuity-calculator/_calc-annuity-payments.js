@@ -1,5 +1,7 @@
-export function calcAnnuityPayments(loanAmount, loanTerm, annualInterestRate) {
-  const monthlyInterestRate = annualInterestRate / 100 / 12;
+import { CONSTANTS } from 'Constants/constants';
+
+export function calcAnnuityPayments(loanAmount, loanTerm) {
+  const monthlyInterestRate = CONSTANTS.ANNUAL_INTEREST_RATE / 100 / 12;
   const totalPayments = loanTerm;
   const annuityCoefficient = (monthlyInterestRate * (1 + monthlyInterestRate) ** totalPayments)
     / ((1 + monthlyInterestRate) ** totalPayments - 1);
