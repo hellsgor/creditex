@@ -10,14 +10,14 @@ export function handleInputChange(event, controls) {
   );
 
   switch (event.target.name) {
-    case CONSTANTS.rangeControls.amountNameID:
+    case CONSTANTS.rangeControls.AMOUNT_NAME_ID:
       controls.paymentControl.value = calcAnnuityPayments(
         controls.amountControl.value,
         controls.termControl.value,
       ).payments[0].paymentAmount;
       controls.paymentControl.dispatchEvent(new Event('input'));
       break;
-    case CONSTANTS.rangeControls.paymentNameID:
+    case CONSTANTS.rangeControls.PAYMENT_NAME_ID:
       changedPaymentControl(
         event.target.value,
         controls.amountControl,
