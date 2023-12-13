@@ -15,7 +15,10 @@
   }
 
   &__graph-wrapper {
+    display: flex;
     width: 100%;
+    flex-direction: column;
+    row-gap: 27px;
   }
 
   &__legend {
@@ -23,5 +26,23 @@
     align-items: center;
     justify-content: center;
     column-gap: 16px;
+  }
+
+  &__graph {
+    display: flex;
+    height: 525px;
+    column-gap: 6px;
+  }
+
+  &__payment-column {
+    flex: 1 1 25px;
+  }
+
+  &__main-debt {
+    background-color: $black-4;
+  }
+
+  &__percent-column {
+    background-color: $gray-5;
   }
 }
