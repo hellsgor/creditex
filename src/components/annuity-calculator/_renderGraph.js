@@ -1,10 +1,4 @@
 export function renderGraph(graphBlock, loanCalculationObject) {
-  console.log(loanCalculationObject);
-
-  // if (!loanCalculationObject || !loanCalculationObject.payments) {
-  //   return;
-  // }
-
   if (graphBlock.childElementCount !== 0) {
     graphBlock.innerHTML = '';
   }
