@@ -43,3 +43,19 @@ block content
 
   include Components/how-it-work/how-it-work.pug
   +howItWork('big')
+
+  include Components/advantages-numbers/advantages-numbers.pug
+  +advantagesNumbers('Показатели платформы', [
+    {
+      title: '800 сделок',
+      description: 'Более 800 успешных сделок',
+    },
+    {
+      title: '3 млрд',
+      description: 'Выдано более 3 млрд рублей',
+    },
+    {
+      title: '74',
+      description: 'Кредитных организаций',
+    },
+  ])(class='advantages-numbers__wrapper_biggest-paddings')
