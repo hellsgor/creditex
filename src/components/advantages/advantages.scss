@@ -2,7 +2,6 @@
 
 .advantages {
 
-
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -16,6 +15,10 @@
 
     &_paddings-62-74 {
       padding: 62px 74px;
+    }
+
+    &_paddings-74-145 {
+      padding: 74px 145px;
     }
   }
 
