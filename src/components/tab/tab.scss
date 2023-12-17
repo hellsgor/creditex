@@ -67,12 +67,10 @@ div.tab {
   }
 
   &__content {
+    transition: opacity .3s ease-in-out;
+
     &_hide {
       display: none;
-    }
-
-    &_show {
-      //display: block;
     }
   }
 }

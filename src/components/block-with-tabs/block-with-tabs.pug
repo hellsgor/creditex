@@ -11,7 +11,7 @@ mixin block-with-tabs(tabsArray)
       each tab, index in tabsArray
         include Components/product-line-tab-content/product-line-tab-content.pug
         if index === 0
-          +product-line-tab-content(tab.tabContent)(class='tab__content tab__content_show block-with-tabs__tab-content')
+          +product-line-tab-content(tab.tabContent)(class='tab__content block-with-tabs__tab-content')
         else
           +product-line-tab-content(tab.tabContent)(class='tab__content tab__content_hide block-with-tabs__tab-content')
 
