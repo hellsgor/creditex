@@ -9,6 +9,15 @@
 
     &_smaller-paddings {
       padding: 58px 181px 40px;
+
+      .advantages-numbers__advantages p {
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+
+    &_biggest-paddings {
+      padding: 75px 277px;
     }
   }
 
@@ -25,14 +34,8 @@
 
     p {
       font-size: 18px;
+      white-space: nowrap;
       color: $gray-3;
-    }
-
-    &_big-font-size {
-      p {
-        font-size: 24px;
-        font-weight: 500;
-      }
     }
   }
 

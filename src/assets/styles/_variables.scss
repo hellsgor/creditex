@@ -26,6 +26,8 @@ $gray-12: #dcdbdc; // бордеры элементов в личном каби
 $gray-13: #5b5c5b; // лэйблы в личном кабинете
 $gray-14: #d9d9d9; // область для drag&drop в личном кабинете
 $gray-15: #4f4f4f;
+$gray-16: #fbfbfb;
+$gray-17: #333;
 
 $yellow-green-1: #e7f79b;
 $yellow-green-2: #dcf472;
@@ -51,6 +53,7 @@ $background-5: $yellow-green-2;
 // radius
 $radius-small: 4px;
 $radius-bit-less: 8px;
+$radius-medium: 16px;
 $radius: 24px;
 
 // shadows
@@ -64,3 +67,9 @@ $transition-default-timing-func: ease-in-out;
 
 // indents
 $section-mb: 40px;
+
+// tabs
+$tab-bg-color: $gray-16;
+$tab-text-color: $gray-8;
+$tab-separator-color: $gray-7;
+$tab-card-bg-color: $gray-17;

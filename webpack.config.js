@@ -9,6 +9,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/pages/main/main.pug',
+    entrepreneur: './src/pages/entrepreneur/entrepreneur.pug',
     uiKit: './src/pages/ui-kit/ui-kit.pug',
   },
   output: {
@@ -59,6 +60,7 @@ module.exports = {
       Utils: path.join(__dirname, './src/utils/'),
       Mixins: path.join(__dirname, './src/assets/pug/mixins/'),
       JSON: path.join(__dirname, './src/assets/json'),
+      Constants: path.join(__dirname, './src/constants'),
     },
   },
   plugins: [

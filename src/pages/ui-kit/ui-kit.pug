@@ -28,3 +28,16 @@ block content
     h2 Input
     include UIKit/form-control/form-control.pug
     +form-control('tel', 'test-input-name', 'Телефон')
+
+    h2 Input-range
+    include UIKit/form-range/form-range.pug
+    +form-range('example-range', 'Желаемая сумма', 500000, 27000000, {
+      one: 'рубль',
+      two: 'рубля',
+      five: 'рублей'
+    }, 3000000)
+
+    h2 Legend color
+    include UIKit/legend-item/legend-item.pug
+    +legend-item('Основной долг', '12141d')
+    +legend-item('Проценты', 'e5e5e5')
