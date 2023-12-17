@@ -1,3 +1,6 @@
+@import 'Components/block-with-tabs/block-with-tabs.scss';
+@import 'Components/product-line-tab-content/product-line-tab-content.scss';
+
 .product-line {
   &__wrapper {
     display: flex;
@@ -8,6 +11,7 @@
 
     & > h4 {
       text-align: center;
+      color: $gray-8;
     }
   }
 }
