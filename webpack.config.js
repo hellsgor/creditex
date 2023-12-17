@@ -10,6 +10,7 @@ module.exports = {
   entry: {
     index: './src/pages/main/main.pug',
     entrepreneur: './src/pages/entrepreneur/entrepreneur.pug',
+    partners: './src/pages/partners/partners.pug',
     uiKit: './src/pages/ui-kit/ui-kit.pug',
   },
   output: {

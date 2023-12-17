@@ -1,0 +1,17 @@
+extends Layouts/public-pages-layout/public-pages-layout.pug
+
+block variables
+  - let title = 'Partners';
+  - let header = true;
+  - let footer = true;
+  - let pageClassName = 'partners-page';
+
+block styles
+  link(href=require('./partners.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./partners.js') defer)
+
+block content
+  include Components/offer/offer.pug
+  include Components/card-issued-block/card-issued-block.pug
