@@ -1,8 +1,9 @@
 export const CONSTANTS = {
   ANNUAL_INTEREST_RATE: 9,
   rangeControls: {
-    amountNameID: 'range-control-calculator-amount',
-    paymentNameID: 'range-control-calculator-payment',
-    termNameID: 'range-control-calculator-term',
+    AMOUNT_NAME_ID: 'range-control-calculator-amount',
+    PAYMENT_NAME_ID: 'range-control-calculator-payment',
+    TERM_NAME_ID: 'range-control-calculator-term',
   },
+  GRAPH_BLOCK_ID: 'calculator-graph',
 };

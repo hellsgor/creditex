@@ -19,6 +19,7 @@
     z-index: 1;
     background-color: $gray-4;
     color: $gray-1;
+    cursor: unset;
   }
 
   &__control {
@@ -28,6 +29,17 @@
     left: 0;
     z-index: 1;
     height: 18px;
+  }
+
+  &__custom-track {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 2px;
+    background-color: $black-4;
+    transform: translateY(-50%);
   }
 
   input[type='range'] {
@@ -65,17 +77,25 @@
       color: transparent;
       cursor: pointer;
     }
-  }
 
-  &__custom-track {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 2px;
-    background-color: $black-4;
-    transform: translateY(-50%);
+    &:disabled {
+      &::-webkit-slider-thumb {
+        border-color: $gray-6;
+        cursor: unset;
+      }
+
+      &::-webkit-slider-runnable-track {
+        cursor: unset;
+      }
+
+      &::-ms-track {
+        cursor: unset;
+      }
+
+      ~ .range__custom-track {
+        background-color: $gray-6;
+      }
+    }
   }
 
   &__numbers-wrapper {

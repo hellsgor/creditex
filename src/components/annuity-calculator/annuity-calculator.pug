@@ -6,20 +6,20 @@
         one: 'рубль',
         two: 'рубля',
         five: 'рублей'
-      }, 3000000)
-      +form-range('calculator-payment', 'Сумма ежемесячного платежа', 0, 1000000, {
-        one: 'рубль',
-        two: 'рубля',
-        five: 'рублей'
-      }, 83333)
+      }, 3000000, false, false)
       +form-range('calculator-term', 'Срок ', 1, 10, {
         one: 'год',
         two: 'года',
         five: 'лет'
-      }, 3, true)
+      }, 3, false, true)
+      +form-range('calculator-payment', 'Сумма ежемесячного платежа', 0, 1000000, {
+        one: 'рубль',
+        two: 'рубля',
+        five: 'рублей'
+      }, 83333, true, false)
     .calculator__graph-wrapper
       .calculator__legend
         include UIKit/legend-item/legend-item.pug
         +legend-item('Основной долг', '12141d')
         +legend-item('Проценты', 'e5e5e5')
-      .calculator__graph
+      .calculator__graph(id='calculator-graph')

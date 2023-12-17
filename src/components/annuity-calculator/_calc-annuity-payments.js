@@ -9,6 +9,7 @@ export function calcAnnuityPayments(loanAmount, loanTerm) {
   const payments = [];
 
   let remainingLoanAmount = loanAmount;
+  let totalLoanWithInterest = 0; // Инициализируем переменную для суммы займа с процентами
 
   for (let month = 1; month <= totalPayments; month++) {
     const interestPayment = remainingLoanAmount * monthlyInterestRate;
@@ -20,16 +21,19 @@ export function calcAnnuityPayments(loanAmount, loanTerm) {
     payments.push({
       month,
       mainDebt: `${((principalPayment / totalPayment) * 100).toFixed(2)}%`,
-      percent: `${((interestPayment / totalPayment) * 100).toFixed(2)}%`,
+      percents: `${((interestPayment / totalPayment) * 100).toFixed(2)}%`,
       paymentAmount: totalPayment.toFixed(2),
       principalPayment: principalPayment.toFixed(2),
       interestPayment: interestPayment.toFixed(2),
     });
+
+    totalLoanWithInterest += totalPayment; // Суммируем сумму займа с процентами
   }
 
   return {
     loanAmount,
     loanTerm,
+    totalLoanWithInterest: totalLoanWithInterest.toFixed(2),
     payments,
   };
 }
