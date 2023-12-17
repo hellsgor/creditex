@@ -1,8 +1,7 @@
 import { preparePaymentControlValue } from 'Components/annuity-calculator/_prepare-payment-control-value';
-import { handleInputChange } from 'Components/annuity-calculator/_handle-input-change';
 import { CONSTANTS } from 'Constants/constants';
 import { renderGraph } from 'Components/annuity-calculator/_renderGraph';
-import { calcAnnuityPayments } from 'Components/annuity-calculator/_calc-annuity-payments';
+import { handleInputChange } from 'Components/annuity-calculator/_handle-input-change';
 
 const graphBlock = document.getElementById(CONSTANTS.GRAPH_BLOCK_ID);
 const controls = {
@@ -28,17 +27,7 @@ renderGraph(
   (control) => {
     if (control) {
       control.addEventListener('input', (event) => {
-        handleInputChange(event, controls);
-      });
-
-      control.addEventListener('change', () => {
-        renderGraph(
-          graphBlock,
-          calcAnnuityPayments(
-            Number(controls.amountControl.value),
-            Number(controls.termControl.value),
-          ),
-        );
+        renderGraph(graphBlock, handleInputChange(event.target, controls));
       });
     }
   },
