@@ -15,3 +15,28 @@ block scripts
 block content
   include Components/offer/offer.pug
   include Components/card-issued-block/card-issued-block.pug
+
+  include Components/advantages/advantages.pug
+  +advantages({
+    title: 'Все онлайн и прозрачно',
+    description: 'В реальном времени видите подключенные клиентом продукты',
+  }, '', [
+    {
+      iconName: 'phone',
+      title: 'Договор онлайн',
+      paragraphs: ['Присоединитесь к договору-оферте онлайн'],
+      bordered: true,
+    },
+    {
+      iconName: 'connection',
+      title: 'Подключение за день',
+      paragraphs: ['Подайте заявку утром, и уже вечером можно начать работу'],
+      bordered: true,
+    },
+    {
+      iconName: 'support',
+      title: 'Персональный менеджер',
+      paragraphs: ['Помогает настроить работу, обучить сотрудников, разобраться с заявками'],
+      bordered: true,
+    },
+  ])(class='advantages__wrapper_paddings-74-145')
