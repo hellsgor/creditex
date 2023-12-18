@@ -10,9 +10,9 @@ export const REGULAR_ANNUITY_CALCULATOR_CONSTANTS = {
 
 export const PARTNER_CALCULATOR_CONSTANTS = {
   rangeControls: {
-    BORROWERS_NAME_ID: 'range-control-text-partner-calc-number-of-borrowers',
+    BORROWERS_NAME_ID: 'range-control-partner-calc-number-of-borrowers',
     AVERAGE_LOAN_AMOUNT_NAME_ID:
-      'range-control-text-partner-calc-average-loan-amount',
+      'range-control-partner-calc-average-loan-amount',
   },
   RESULT_ID: 'partner-calc-result',
 };
