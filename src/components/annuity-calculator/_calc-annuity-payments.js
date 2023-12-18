@@ -1,7 +1,7 @@
-import { CONSTANTS } from 'Constants/constants';
+import { REGULAR_ANNUITY_CALCULATOR_CONSTANTS } from 'Constants/constants';
 
 export function calcAnnuityPayments(loanAmount, loanTerm) {
-  const monthlyInterestRate = CONSTANTS.ANNUAL_INTEREST_RATE / 100 / 12;
+  const monthlyInterestRate = REGULAR_ANNUITY_CALCULATOR_CONSTANTS.ANNUAL_INTEREST_RATE / 100 / 12;
   const totalPayments = loanTerm;
   const annuityCoefficient = (monthlyInterestRate * (1 + monthlyInterestRate) ** totalPayments)
     / ((1 + monthlyInterestRate) ** totalPayments - 1);

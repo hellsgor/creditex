@@ -1,17 +1,21 @@
 import { preparePaymentControlValue } from 'Components/annuity-calculator/_prepare-payment-control-value';
-import { CONSTANTS } from 'Constants/constants';
+import { REGULAR_ANNUITY_CALCULATOR_CONSTANTS } from 'Constants/constants';
 import { renderGraph } from 'Components/annuity-calculator/_renderGraph';
 import { handleInputChange } from 'Components/annuity-calculator/_handle-input-change';
 
-const graphBlock = document.getElementById(CONSTANTS.GRAPH_BLOCK_ID);
+const graphBlock = document.getElementById(
+  REGULAR_ANNUITY_CALCULATOR_CONSTANTS.GRAPH_BLOCK_ID,
+);
 const controls = {
   amountControl: document.getElementById(
-    CONSTANTS.rangeControls.AMOUNT_NAME_ID,
+    REGULAR_ANNUITY_CALCULATOR_CONSTANTS.rangeControls.AMOUNT_NAME_ID,
   ),
   paymentControl: document.getElementById(
-    CONSTANTS.rangeControls.PAYMENT_NAME_ID,
+    REGULAR_ANNUITY_CALCULATOR_CONSTANTS.rangeControls.PAYMENT_NAME_ID,
   ),
-  termControl: document.getElementById(CONSTANTS.rangeControls.TERM_NAME_ID),
+  termControl: document.getElementById(
+    REGULAR_ANNUITY_CALCULATOR_CONSTANTS.rangeControls.TERM_NAME_ID,
+  ),
 };
 
 renderGraph(
