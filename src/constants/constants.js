@@ -1,4 +1,4 @@
-export const CONSTANTS = {
+export const REGULAR_ANNUITY_CALCULATOR_CONSTANTS = {
   ANNUAL_INTEREST_RATE: 9,
   rangeControls: {
     AMOUNT_NAME_ID: 'range-control-calculator-amount',
