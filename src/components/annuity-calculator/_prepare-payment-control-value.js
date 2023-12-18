@@ -1,5 +1,5 @@
 import { calcAnnuityPayments } from 'Components/annuity-calculator/_calc-annuity-payments';
-import { CONSTANTS } from 'Constants/constants';
+import { REGULAR_ANNUITY_CALCULATOR_CONSTANTS } from 'Constants/constants';
 
 export function preparePaymentControlValue(
   amountControl,
@@ -9,7 +9,7 @@ export function preparePaymentControlValue(
   const calcAnnuityPaymentsResult = calcAnnuityPayments(
     amountControl.value,
     termControl.value,
-    CONSTANTS.ANNUAL_INTEREST_RATE,
+    REGULAR_ANNUITY_CALCULATOR_CONSTANTS.ANNUAL_INTEREST_RATE,
   );
 
   paymentControl.value = Number(

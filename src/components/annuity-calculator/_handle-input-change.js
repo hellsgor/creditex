@@ -1,5 +1,5 @@
 import { calcAnnuityPayments } from 'Components/annuity-calculator/_calc-annuity-payments';
-import { CONSTANTS } from 'Constants/constants';
+import { REGULAR_ANNUITY_CALCULATOR_CONSTANTS } from 'Constants/constants';
 
 export function handleInputChange(target, controls) {
   let calcAnnuityPaymentsResult = {};
@@ -8,7 +8,10 @@ export function handleInputChange(target, controls) {
     controls.termControl.value,
   );
 
-  if (target.name === CONSTANTS.rangeControls.AMOUNT_NAME_ID) {
+  if (
+    target.name
+    === REGULAR_ANNUITY_CALCULATOR_CONSTANTS.rangeControls.AMOUNT_NAME_ID
+  ) {
     controls.paymentControl.value = calcAnnuityPayments(
       controls.amountControl.value,
       controls.termControl.value,
@@ -16,7 +19,10 @@ export function handleInputChange(target, controls) {
     controls.paymentControl.dispatchEvent(new Event('input'));
   }
 
-  if (target.name === CONSTANTS.rangeControls.TERM_NAME_ID) {
+  if (
+    target.name
+    === REGULAR_ANNUITY_CALCULATOR_CONSTANTS.rangeControls.TERM_NAME_ID
+  ) {
     controls.paymentControl.value = calcAnnuityPayments(
       controls.amountControl.value,
       controls.termControl.value,
