@@ -7,19 +7,19 @@ mixin header()
         nav.header__main-menu
           ul.header__main-menu-list
             // TODO: Сделать ссылки на страницы и метку текущей страницы
-            include Components/common/header/main-menu-item/main-menu-item.pug
+            include Components/common/header/_main-menu-item.pug
             +main-manu-item({
               text: 'Главная',
-              href: '#'
-            }, 'header')(class = 'header__main-menu-item-link header__main-menu-item-link_this-page')
+              href: './',
+            }, 'header', '')(class = 'header__main-menu-item-link')
             +main-manu-item({
               text: 'Предпринимателям',
-              href: '#'
-            }, 'header')(class = 'header__main-menu-item-link')
+              href: './entrepreneur.html'
+            }, 'header', 'entrepreneur')(class = 'header__main-menu-item-link')
             +main-manu-item({
               text: 'Партнерам',
-              href: '#'
-            }, 'header')(class = 'header__main-menu-item-link')
+              href: './partners.html'
+            }, 'header', 'partners')(class = 'header__main-menu-item-link')
         .header__lk-buttons
           // TODO: Сделать переходы на страницы авторизации и регистрации
           include UIKit/button/button.pug
