@@ -1,0 +1,29 @@
+@import 'Styles/styles';
+@import 'Components/common/user-account-header/user-account-header.scss';
+@import 'Components/common/user-account-footer/user-account-footer.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: $light-gray;
+}
+
+.page__main {
+  flex: 1 0 auto;
+
+  .section {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__wrapper {
+      overflow: hidden;
+      border-radius: $radius;
+    }
+  }
+}
