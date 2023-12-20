@@ -2,6 +2,7 @@ import { phoneValidation } from 'Utils/validation/phoneValidation';
 import { showError } from 'Utils/errors/show-error';
 import { sendData } from 'Utils/handle-form-submit/_send-data';
 import { serializeData } from 'Utils/handle-form-submit/_serialize-data';
+import { ERRORS } from 'Constants/errors';
 
 export function offerSubmit(offerControl) {
   if (offerControl.value) {
@@ -12,7 +13,7 @@ export function offerSubmit(offerControl) {
         offerControl.value.toString().replace(/[^\d]/g, ''),
       )}`;
     } else {
-      showError('CE001', offerControl);
+      showError(ERRORS.CE001, offerControl);
     }
   } else {
     window.location.href = './registration.html';
