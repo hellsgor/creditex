@@ -10,18 +10,11 @@ html(lang='ru' class='page')
     block styles
   body(class='page__body')
 
-
+    include Components/common/user-account-header/user-account-header.pug
 
     main.page__main(class=pageClassName)
-      header.user-account-header
-        .user-account-header__logo
-          include Images/logo.pug
-        if (username)
-          .user-account-header__user
-            .user-account-header__image
-              include Components/svg-icon/svg-icon.pug
-              +svgIcon(user)
-            .user-account-header__name #{username}
       block content
+
+    include Components/common/user-account-footer/user-account-footer.pug
 
     block scripts

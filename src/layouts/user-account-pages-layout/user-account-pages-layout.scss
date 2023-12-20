@@ -1,7 +1,5 @@
 @import 'Styles/styles';
-@import 'Components/common/header/header';
-@import 'Components/common/register-oneself/register-oneself.scss';
-@import 'Components/common/footer/footer';
+@import 'Components/common/user-account-footer/user-account-footer.scss';
 
 html,
 body {
@@ -23,8 +21,8 @@ body {
     }
 
     &__wrapper {
-      border-radius: $radius;
       overflow: hidden;
+      border-radius: $radius;
     }
   }
 }
