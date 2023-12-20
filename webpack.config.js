@@ -11,6 +11,7 @@ module.exports = {
     index: './src/pages/main/main.pug',
     entrepreneur: './src/pages/entrepreneur/entrepreneur.pug',
     partners: './src/pages/partners/partners.pug',
+    authorization: './src/pages/authorization/authorization.pug',
     uiKit: './src/pages/ui-kit/ui-kit.pug',
   },
   output: {
