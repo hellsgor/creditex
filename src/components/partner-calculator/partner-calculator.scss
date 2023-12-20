@@ -30,13 +30,23 @@
   &__action {
     display: flex;
     max-width: 651px;
-    align-items: center;
     justify-content: space-between;
     column-gap: 8px;
 
     .form-control {
+      position: relative;
       flex: 0 0 527px;
+
+      &__error {
+        position: absolute;
+        top: 58px;
+        left: 0;
+      }
     }
+  }
+
+  &__action-button {
+    margin-top: 1px;
   }
 
   &__result {

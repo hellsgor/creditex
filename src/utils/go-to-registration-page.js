@@ -4,7 +4,7 @@ import { sendData } from 'Utils/handle-form-submit/_send-data';
 import { serializeData } from 'Utils/handle-form-submit/_serialize-data';
 import { ERRORS } from 'Constants/errors';
 
-export function offerSubmit(offerControl) {
+export function goToRegistrationPage(offerControl) {
   if (offerControl.value) {
     if (phoneValidation(offerControl)) {
       // TODO: актуализировать URL в sendData при передаче в back

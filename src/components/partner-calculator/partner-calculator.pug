@@ -15,9 +15,7 @@ section.partner-calculator
           span Ожидаемый доход
           span(id='partner-calc-result')
       .partner-calculator__action
-        //TODO: сделать переход на страницу регистрации и добавление номера телефона в соответствующий контрол
-        //TODO: сделать отправку номера телефона на сервер
         include UIKit/form-control/form-control.pug
         +form-control('tel', 'partner-calc-phone', 'Телефон')(class='partner-calculator__action-input')
         include UIKit/button/button.pug
-        +button('partner-calc-button', '#', 'button', 'primary', 'Начать')(class='partner-calculator__action-button')
+        +button('partner-calc-button', '', 'button', 'primary', 'Начать')(class='partner-calculator__action-button')
