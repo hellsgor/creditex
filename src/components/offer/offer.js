@@ -1,5 +1,5 @@
 import { addPhoneMask } from 'Utils/phone-mask/phone-mask';
-import { offerSubmit } from 'Components/offer/_offer-submit';
+import { offerSubmit } from 'Utils/go-to-registration-page';
 import { resetError } from 'Utils/errors/reset-error';
 
 const offerControl = document.getElementById('offer-phone');
