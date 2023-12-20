@@ -8,6 +8,10 @@
 
 .container {
   width: 100%;
-  max-width: 1780px;
+  padding: 0 70px;
   margin: 0 auto;
+
+  &_user-account {
+    padding: 0 24px;
+  }
 }
