@@ -15,6 +15,7 @@ html(lang='ru' class='page')
     main.page__main(class=pageClassName)
       block content
 
-    include Components/common/user-account-footer/user-account-footer.pug
+    if (footer)
+      include Components/common/user-account-footer/user-account-footer.pug
 
     block scripts
