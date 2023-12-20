@@ -6,12 +6,23 @@ Freelance project
 
 ---
 
-1. [Клонирование репозитория](#a-namerepo-clone-клонирование-репозитория-a)
-2. [Версионность](#a-nameversions-версионность-a)
-3. [Работа с npm](#a-namenpmcommands-работа-с-npm-a)
-4. [Файловая структура](#a-namefile-structure-файловая-структура-a)
-5. [Alias'ы](#a-namealias-aliasы-a)
-6. [Советы и правила](#a-nametips-and-rules-советы-и-правила-a)
+1. [Список страниц](#a-page-list-список-страниц-a)
+2. [Клонирование репозитория](#a-namerepo-clone-клонирование-репозитория-a)
+3. [Версионность](#a-nameversions-версионность-a)
+4. [Работа с npm](#a-namenpmcommands-работа-с-npm-a)
+5. [Файловая структура](#a-namefile-structure-файловая-структура-a)
+6. [Alias'ы](#a-namealias-aliasы-a)
+7. [Советы и правила](#a-nametips-and-rules-советы-и-правила-a)
+
+---
+
+## <a name='page-list'>Список страниц</a>
+
+Публикация из ветки gh-pages.
+
+* Главная страница - https://hellsgor.github.io/creditex/;
+* Предпринимателям - https://hellsgor.github.io/creditex/entrepreneur.html;
+* Партнёрам - https://hellsgor.github.io/creditex/partners.html.
 
 ---
 
