@@ -6,7 +6,6 @@ mixin header()
           include Images/logo.pug
         nav.header__main-menu
           ul.header__main-menu-list
-            // TODO: Сделать ссылки на страницы и метку текущей страницы
             include Components/common/header/_main-menu-item.pug
             +main-manu-item({
               text: 'Главная',
@@ -21,7 +20,6 @@ mixin header()
               href: './partners.html'
             }, 'header', 'partners')(class = 'header__main-menu-item-link')
         .header__lk-buttons
-          // TODO: Сделать переходы на страницы авторизации и регистрации
           include UIKit/button/button.pug
-          +button('header-lk-entry', '#', '', 'link', 'Войти', 'entry')(class='header__lk-entry-button')
-          +button('lets-start', '', 'button', 'primary', 'Начать')(class='header__lets-start-button')
+          +button('header-lk-entry', './authorization.html', '', 'link', 'Войти', 'entry')(class='header__lk-entry-button')
+          +button('lets-start', './registration.html', 'link', 'primary', 'Начать')(class='header__lets-start-button')
