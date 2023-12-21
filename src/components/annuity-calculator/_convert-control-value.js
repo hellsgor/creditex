@@ -2,6 +2,7 @@ import { getRange } from 'Components/annuity-calculator/_get-range';
 import { REGULAR_ANNUITY_CALCULATOR_CONSTANTS } from 'Constants/constants';
 import { getLocaleString } from 'Utils/get-locale-string';
 import { pluralizer } from 'pluralizer-for-js';
+import { preparePaymentControlValue } from 'Components/annuity-calculator/_prepare-payment-control-value';
 
 export function convertControlValue(control, controls) {
   ['change', 'blur', 'keydown'].forEach((type) => {
@@ -42,6 +43,11 @@ export function convertControlValue(control, controls) {
           ) {
             target.value = getLocaleString(target.value);
           }
+          preparePaymentControlValue(
+            controls.amountControl,
+            controls.paymentControl,
+            controls.termControl,
+          );
         } else if (type === 'keydown' && keyCode === 13) {
           target.blur();
         }

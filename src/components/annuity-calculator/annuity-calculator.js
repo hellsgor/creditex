@@ -45,6 +45,7 @@ renderGraph(
         const range = getRange(target, controls);
 
         target.value = range.value;
+        controls.paymentControl.value = '';
       });
     }
   },
