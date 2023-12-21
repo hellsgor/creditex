@@ -12,11 +12,9 @@
         two: 'года',
         five: 'лет'
       }, 3, false, true)
-      +form-range('calculator-payment', 'Сумма ежемесячного платежа', 0, 1000000, {
-        one: 'рубль',
-        two: 'рубля',
-        five: 'рублей'
-      }, 83333, true, false)
+      label.calculator__payment-label Сумма ежемесячного платежа
+        include UIKit/form-control/form-control.pug
+        +form-control('text', 'form-control-calculator-payment', '')(readonly=true)
     .calculator__graph-wrapper
       .calculator__legend
         include UIKit/legend-item/legend-item.pug

@@ -16,5 +16,10 @@
     &::placeholder {
       color: $gray-1;
     }
+
+    &:read-only {
+      background-color: $gray-4;
+      color: $gray-1;
+    }
   }
 }

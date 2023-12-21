@@ -1,4 +1,4 @@
-import { getLocaleString } from 'UIKit/form-range/_get-locale-string';
+import { getLocaleString } from 'Utils/get-locale-string';
 import { pluralizer } from 'pluralizer-for-js';
 import { changeAfterChangingControlValue } from 'UIKit/form-range/_change-after-changing-control-value';
 

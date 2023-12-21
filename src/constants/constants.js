@@ -2,8 +2,12 @@ export const REGULAR_ANNUITY_CALCULATOR_CONSTANTS = {
   ANNUAL_INTEREST_RATE: 9,
   rangeControls: {
     AMOUNT_NAME_ID: 'range-control-calculator-amount',
-    PAYMENT_NAME_ID: 'range-control-calculator-payment',
+    PAYMENT_NAME_ID: 'form-control-calculator-payment',
     TERM_NAME_ID: 'range-control-calculator-term',
+  },
+  rangeTextControls: {
+    AMOUNT_TEXT_NAME_ID: 'range-control-text-calculator-amount',
+    TERM_TEXT_NAME_ID: 'range-control-text-calculator-term',
   },
   GRAPH_BLOCK_ID: 'calculator-graph',
 };
