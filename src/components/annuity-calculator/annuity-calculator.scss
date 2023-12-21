@@ -45,4 +45,10 @@
   &__percent-column {
     background-color: $gray-5;
   }
+
+  &__payment-label {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
 }

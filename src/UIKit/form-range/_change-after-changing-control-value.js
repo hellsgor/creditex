@@ -1,4 +1,4 @@
-import { getLocaleString } from 'UIKit/form-range/_get-locale-string';
+import { getLocaleString } from 'Utils/get-locale-string';
 import { getCustomTrackWidth } from 'UIKit/form-range/_get-custom-track-width';
 
 export function changeAfterChangingControlValue(
