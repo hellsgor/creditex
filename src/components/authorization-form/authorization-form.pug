@@ -1,0 +1,19 @@
+form.authorization-form
+  h4 Авторизация
+
+  .authorization-form__inner
+    .authorization-form__controls
+      include UIKit/form-control/form-control.pug
+      +form-control('text', 'auth-phone', 'Телефон')
+      include UIKit/form-password/form-password.pug
+      +form-control('password', 'auth-password', 'Пароль')
+      .authorization-form__row
+        include UIKit/form-checkbox/form-checkbox.pug
+        +form-checkbox('auth-remember-user', 'Запомнить меня')
+        include UIKit/button/button.pug
+        +button('auth-forgot-password-button', '#', 'button', 'link', 'Забыли пароль?')
+    .authorization-form__buttons
+      +button('auth-to-registration-button', '#', 'button', 'secondary', 'Регистрация')
+      +button('auth-come-in-button', '', 'button', 'primary', 'Войти')
+
+
