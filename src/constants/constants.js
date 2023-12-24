@@ -20,3 +20,10 @@ export const PARTNER_CALCULATOR_CONSTANTS = {
   },
   RESULT_ID: 'partner-calc-result',
 };
+
+export const AUTHORIZATION_PAGE_CONSTANTS = {
+  rememberUserCheckbox: 'auth-remember-user',
+  phoneControl: 'auth-phone',
+  passwordControl: 'auth-password',
+  comeInButton: 'auth-come-in-button',
+};
