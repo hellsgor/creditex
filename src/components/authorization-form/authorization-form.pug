@@ -4,7 +4,7 @@ form.authorization-form
   .authorization-form__inner
     .authorization-form__controls
       include UIKit/form-control/form-control.pug
-      +form-control('text', 'auth-phone', 'Телефон')(class='authorization-form__phone-control')
+      +form-control('tel', 'auth-phone', 'Телефон')(class='authorization-form__phone-control')
       include UIKit/form-password/form-password.pug
       +form-control('password', 'auth-password', 'Пароль')(class='authorization-form__password-control')
       .authorization-form__row
