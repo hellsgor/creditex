@@ -31,11 +31,13 @@ export const AUTHORIZATION_PAGE_CONSTANTS = {
 
 export const REGISTRATION_PAGE_CONSTANTS = {
   registrationForm: 'registration-form',
-  innControl: 'registration-inn',
-  phoneControl: 'registration-phone',
-  passwordControl: 'registration-password',
-  repeatPasswordControl: 'registration-repeat-password',
-  rememberUserCheckbox: 'registration-remember-user',
+  registrationFormControls: {
+    innControl: 'registration-inn',
+    phoneControl: 'registration-phone',
+    passwordControl: 'registration-password',
+    repeatPasswordControl: 'registration-repeat-password',
+    rememberUserCheckbox: 'registration-remember-user',
+  },
   toAuthButton: 'registration-to-auth-button',
   comeInButton: 'registration-come-in-button',
 };
