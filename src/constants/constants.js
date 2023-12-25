@@ -27,3 +27,7 @@ export const AUTHORIZATION_PAGE_CONSTANTS = {
   passwordControl: 'auth-password',
   comeInButton: 'auth-come-in-button',
 };
+
+export const COMMON_CONSTANTS = {
+  MAX_PASSWORD_LENGTH: 40,
+};
