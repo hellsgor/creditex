@@ -1,5 +1,5 @@
 import 'UIKit/form-password/form-password';
-import 'Utils/phone-mask/phone-mask';
+import 'Utils/masks/phone-mask';
 import { AUTHORIZATION_PAGE_CONSTANTS } from 'Constants/constants';
 import { phoneValidation } from 'Utils/validation/phone-validation';
 import { passwordValidation } from 'Utils/validation/password-validation';

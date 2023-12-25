@@ -1,4 +1,4 @@
-import { addPhoneMask } from 'Utils/phone-mask/phone-mask';
+import { addPhoneMask } from 'Utils/masks/phone-mask';
 import { goToRegistrationPage } from 'Utils/go-to-registration-page';
 import { resetError } from 'Utils/errors/reset-error';
 
