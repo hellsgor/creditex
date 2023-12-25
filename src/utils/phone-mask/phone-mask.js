@@ -71,3 +71,5 @@ export function addPhoneMask() {
     phoneInput.addEventListener('paste', onPhonePaste, false);
   });
 }
+
+addPhoneMask();

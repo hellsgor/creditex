@@ -64,6 +64,7 @@ module.exports = {
       Mixins: path.join(__dirname, './src/assets/pug/mixins/'),
       JSON: path.join(__dirname, './src/assets/json'),
       Constants: path.join(__dirname, './src/constants'),
+      Moc: path.join(__dirname, './src/assets/moc/'),
     },
   },
   plugins: [
@@ -85,8 +86,8 @@ module.exports = {
           to: path.resolve(__dirname, 'build/assets/icons/'),
         },
         {
-          from: path.resolve(__dirname, 'src/assets/json/'),
-          to: path.resolve(__dirname, 'build/assets/json/'),
+          from: path.resolve(__dirname, 'src/assets/moc/'),
+          to: path.resolve(__dirname, 'build/moc/'),
         },
       ],
     }),
