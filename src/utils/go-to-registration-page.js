@@ -1,4 +1,4 @@
-import { phoneValidation } from 'Utils/validation/phoneValidation';
+import { phoneValidation } from 'Utils/validation/phone-validation';
 import { showError } from 'Utils/errors/show-error';
 import { sendData } from 'Utils/handle-form-submit/_send-data';
 import { serializeData } from 'Utils/handle-form-submit/_serialize-data';
