@@ -1,12 +1,12 @@
-form.authorization-form
+form.authorization-form(name='authorization-form', id='authorization-form', data-location-href = './lk-broker.html')
   h4 Авторизация
 
   .authorization-form__inner
     .authorization-form__controls
       include UIKit/form-control/form-control.pug
-      +form-control('tel', 'auth-phone', 'Телефон')(class='authorization-form__phone-control')
+      +form-control('tel', 'auth-phone', 'Телефон')(class='authorization-form__phone-control', autocomplete='username')
       include UIKit/form-password/form-password.pug
-      +form-control('password', 'auth-password', 'Пароль')(class='authorization-form__password-control')
+      +form-control('password', 'auth-password', 'Пароль')(class='authorization-form__password-control', autocomplete='current-password')
       .authorization-form__row
         include UIKit/form-checkbox/form-checkbox.pug
         +form-checkbox('auth-remember-user', 'Запомнить меня')(class='authorization-form__remember-user-checkbox', checked=true)
