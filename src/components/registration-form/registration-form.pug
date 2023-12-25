@@ -1,0 +1,18 @@
+form.registration-form(id='registration-form', name='registration-form', data-location-href='./lk-broker.html')
+  h4 Регистрация
+
+  .registration-form__inner
+    .registration-form__controls
+      include UIKit/form-control/form-control.pug
+      +form-control('text', 'registration-inn', 'ИНН')(class='registration-form__inn-control')
+      +form-control('tel', 'registration-phone', 'Телефон')(class='registration-form__phone-control', autocomplete='username')
+      include UIKit/form-password/form-password.pug
+      +form-control('password', 'registration-password', 'Пароль')(class='registration-form__password-control', autocomplete='current-password')
+      +form-control('password', 'registration-repeat-password', 'Повторите пароль')(class='registration-form__password-control', autocomplete='current-password')
+      .registration-form__row
+        include UIKit/form-checkbox/form-checkbox.pug
+        +form-checkbox('registration-remember-user', 'Запомнить меня')(class='registration-form__remember-user-checkbox', checked=true)
+    .registration-form__buttons
+      include UIKit/button/button.pug
+      +button('registration-to-auth-button', './authorization.html', 'button', 'secondary', 'Авторизация')(class='registration-form__to-auth-button')
+      +button('registration-come-in-button', '', 'button', 'primary', 'Войти')(class='registration-form__come-in-button')
