@@ -26,8 +26,10 @@ export const AUTHORIZATION_PAGE_CONSTANTS = {
   phoneControl: 'auth-phone',
   passwordControl: 'auth-password',
   comeInButton: 'auth-come-in-button',
+  authorization_form: 'authorization-form',
 };
 
 export const COMMON_CONSTANTS = {
   MAX_PASSWORD_LENGTH: 40,
+  MIN_PASSWORD_LENGTH: 8,
 };
