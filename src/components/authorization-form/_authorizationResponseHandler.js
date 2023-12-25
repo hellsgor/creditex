@@ -7,7 +7,6 @@ export function authorizationResponseHandler(
   controlsArray,
   defaultErrorControl = null,
 ) {
-  console.log(response);
   if (!isSuccess(response)) {
     errorsProcessingFromResponse(response, controlsArray, defaultErrorControl);
   } else {

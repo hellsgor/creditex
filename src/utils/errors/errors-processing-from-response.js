@@ -6,7 +6,6 @@ export function errorsProcessingFromResponse(
   controlsArray,
   defaultErrorControl = null,
 ) {
-  console.log('errorsProcessingFromResponse - Response', response);
   if (Array.isArray(controlsArray)) {
     controlsArray.forEach((control) => {
       control.removeAttribute('readonly');

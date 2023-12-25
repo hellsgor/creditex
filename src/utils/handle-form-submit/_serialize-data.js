@@ -1,6 +1,5 @@
 export function serializeData(controlsArrayOrForm) {
   let data;
-  // console.log(controlsArrayOrForm);
   if (Array.isArray(controlsArrayOrForm)) {
     data = new FormData();
     controlsArrayOrForm.forEach((control) => {
