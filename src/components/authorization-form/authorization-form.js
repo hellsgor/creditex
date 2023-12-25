@@ -41,10 +41,10 @@ document
     });
 
     if (!phoneValidation(phoneControl)) {
-      showError(ERRORS.CE001, phoneControl);
+      showError(ERRORS.CE001(), phoneControl);
     }
     if (!passwordValidation(passwordControl)) {
-      showError(ERRORS.CE002, passwordControl);
+      showError(ERRORS.CE002(), passwordControl);
     }
 
     if (phoneValidation(phoneControl) && passwordValidation(passwordControl)) {

@@ -22,7 +22,7 @@ export function errorsProcessingFromResponse(
           && (controlError['control-name'] === undefined
             || controlError['control-name'] === 'undefined')
         ) {
-          showError(ERRORS.CE004, defaultErrorControl);
+          showError(ERRORS.CE004(), defaultErrorControl);
         }
       });
     });

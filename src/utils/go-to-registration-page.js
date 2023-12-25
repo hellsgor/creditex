@@ -13,7 +13,7 @@ export function goToRegistrationPage(offerControl) {
         offerControl.value.toString().replace(/[^\d]/g, ''),
       )}`;
     } else {
-      showError(ERRORS.CE001, offerControl);
+      showError(ERRORS.CE001(), offerControl);
     }
   } else {
     window.location.href = './registration.html';
