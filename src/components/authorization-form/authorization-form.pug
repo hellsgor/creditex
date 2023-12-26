@@ -11,7 +11,7 @@ form.authorization-form(name='authorization-form', id='authorization-form', data
         include UIKit/form-checkbox/form-checkbox.pug
         +form-checkbox('auth-remember-user', 'Запомнить меня')(class='authorization-form__remember-user-checkbox', checked=true)
         include UIKit/button/button.pug
-        +button('auth-forgot-password-button', './restore-password.html', 'button', 'link', 'Забыли пароль?')(class='authorization-form__forgot-password-button')
+        +button('auth-forgot-password-button', './restorePassword.html', 'button', 'link', 'Забыли пароль?')(class='authorization-form__forgot-password-button')
     .authorization-form__buttons
       +button('auth-to-registration-button', './registration.html', 'button', 'secondary', 'Регистрация')(class='authorization-form__to-registration-button')
       +button('auth-come-in-button', '', 'button', 'primary', 'Войти')(class='authorization-form__come-in-button')
