@@ -1,4 +1,4 @@
-import { addPhoneMask } from 'Utils/phone-mask/phone-mask';
+import { addPhoneMask } from 'Utils/masks/phone-mask';
 import 'UIKit/form-range/form-range';
 
 document.querySelectorAll('input[type="tel"]').forEach((telControl) => {

@@ -1,7 +1,7 @@
 export function resetError(control) {
-  const errorElem = control
-    .closest('.form-control')
-    .querySelector('.form-control__error');
+  const errorElem = control.closest('.form-control')
+    ? control.closest('.form-control').querySelector('.form-control__error')
+    : control.closest('.form-select').querySelector('.form-select__error');
 
   if (
     errorElem.classList.contains('error_fade')
