@@ -9,8 +9,15 @@ import { resetError } from 'Utils/errors/reset-error';
 const registrationControls = Object.values(
   REGISTRATION_PAGE_CONSTANTS.registrationFormControls,
 ).map((id) => document.getElementById(id));
+const phoneControl = document.getElementById(
+  REGISTRATION_PAGE_CONSTANTS.registrationFormControls.phoneControl,
+);
 
 addPhoneMask();
+phoneControl.value = new URLSearchParams(window.location.search).get(
+  'phoneNumber',
+);
+phoneControl.dispatchEvent(new Event('input'));
 
 registrationControls.forEach((control) => {
   if (
