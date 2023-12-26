@@ -3,6 +3,14 @@ form.registration-form(id='registration-form', name='registration-form', data-lo
 
   .registration-form__inner
     .registration-form__controls
+      include UIKit/form-select/form-select.pug
+      +form-select('registration-user-type', [{
+        text: 'Брокер',
+        value: 'broker'
+      }, {
+        text: 'Заёмщик',
+        value: 'borrower'
+      }], 'Выберите тип пользователя')(class='registration-form__user-type-control')
       include UIKit/form-control/form-control.pug
       +form-control('text', 'registration-inn', 'ИНН')(class='registration-form__inn-control')
       +form-control('tel', 'registration-phone', 'Телефон')(class='registration-form__phone-control', autocomplete='username')

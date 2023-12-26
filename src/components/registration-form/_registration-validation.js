@@ -9,6 +9,17 @@ export function registrationValidation(controls) {
   controls.forEach((control) => {
     if (
       control.id
+      === REGISTRATION_PAGE_CONSTANTS.registrationFormControls.userTypeControl
+    ) {
+      resetError(control);
+      if (control.value === '') {
+        isValid = false;
+        showError(ERRORS.CE007(), control);
+      }
+    }
+
+    if (
+      control.id
       === REGISTRATION_PAGE_CONSTANTS.registrationFormControls.innControl
     ) {
       resetError(control);

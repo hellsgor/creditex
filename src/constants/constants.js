@@ -32,6 +32,7 @@ export const AUTHORIZATION_PAGE_CONSTANTS = {
 export const REGISTRATION_PAGE_CONSTANTS = {
   registrationForm: 'registration-form',
   registrationFormControls: {
+    userTypeControl: 'registration-user-type',
     innControl: 'registration-inn',
     phoneControl: 'registration-phone',
     passwordControl: 'registration-password',
