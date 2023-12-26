@@ -1,0 +1,8 @@
+mixin form-select(nameOrID, options, placeholder)
+  .form-select
+    select(id=nameOrID, name=nameOrID)
+      if placeholder
+        option(disabled, selected) #{placeholder}
+      each option in options
+        option(value=option.value) #{option.text}
+    .form-select__arrow

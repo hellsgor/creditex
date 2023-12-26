@@ -45,3 +45,11 @@ block content
     h2 Checkbox
     include UIKit/form-checkbox/form-checkbox.pug
     +form-checkbox('example-checkbox', 'Test checkbox')
+
+    h2 Select
+    include UIKit/form-select/form-select.pug
+    +form-select('example-select', [
+      {text: 'option 1', value: '1'},
+      {text: 'option 2', value: '2'},
+      {text: 'option 3', value: '3'},
+    ], 'Choose some...')
