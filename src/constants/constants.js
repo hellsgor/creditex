@@ -43,6 +43,14 @@ export const REGISTRATION_PAGE_CONSTANTS = {
   comeInButton: 'registration-come-in-button',
 };
 
+export const CONFIRMATION_PAGE_CONSTANTS = {
+  confirmationForm: 'confirmation-form',
+  confirmationFormControls: {
+    confirmationCodeControl: 'confirmation-code',
+  },
+  confirmationForwardButton: 'confirmation-forward-button',
+};
+
 export const COMMON_CONSTANTS = {
   MAX_PASSWORD_LENGTH: 40,
   MIN_PASSWORD_LENGTH: 8,
