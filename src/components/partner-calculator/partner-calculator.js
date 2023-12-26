@@ -17,7 +17,6 @@ result.textContent = getCalculationResult(averageLoanAmount, borrowers);
 
 [borrowers, averageLoanAmount].forEach((control) => {
   control.addEventListener('input', () => {
-    console.log(control.value);
     result.textContent = getCalculationResult(averageLoanAmount, borrowers);
   });
 });

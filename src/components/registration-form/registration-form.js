@@ -41,10 +41,7 @@ registrationControls.forEach((control) => {
 document
   .getElementById(REGISTRATION_PAGE_CONSTANTS.comeInButton)
   .addEventListener('click', () => {
-    const isValid = registrationValidation(registrationControls);
-    console.log(isValid);
-
-    if (isValid) {
+    if (registrationValidation(registrationControls)) {
       handleFormSubmit(
         registrationControls,
         // TODO: Изменить url при передаче в бэк
