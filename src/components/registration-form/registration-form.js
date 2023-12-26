@@ -5,6 +5,8 @@ import { numbersOnly } from 'Utils/masks/numbers-only-mask';
 import { addPhoneMask } from 'Utils/masks/phone-mask';
 import { registrationValidation } from 'Components/registration-form/_registration-validation';
 import { resetError } from 'Utils/errors/reset-error';
+import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
+import { registrationResponseHandler } from 'Components/registration-form/_registration-response-handler';
 
 const registrationControls = Object.values(
   REGISTRATION_PAGE_CONSTANTS.registrationFormControls,
@@ -41,4 +43,14 @@ document
   .addEventListener('click', () => {
     const isValid = registrationValidation(registrationControls);
     console.log(isValid);
+
+    if (isValid) {
+      handleFormSubmit(
+        registrationControls,
+        // TODO: Изменить url при передаче в бэк
+        './moc/registration-response-success.json',
+        registrationResponseHandler,
+        true,
+      );
+    }
   });
