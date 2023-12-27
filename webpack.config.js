@@ -14,7 +14,8 @@ module.exports = {
     authorization: './src/pages/authorization/authorization.pug',
     registration: './src/pages/registration/registration.pug',
     confirmation: './src/pages/confirmation/confirmation.pug',
-    restorePassword: './src/pages/restore-password/restore-password.pug',
+    restorePasswordPhoneNumberRequest:
+      './src/pages/restore-password-request/restore-password-request.pug',
     uiKit: './src/pages/ui-kit/ui-kit.pug',
   },
   output: {
