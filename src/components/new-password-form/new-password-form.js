@@ -6,10 +6,20 @@ import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { newPasswordResponseHandler } from 'Components/new-password-form/_new-password-response-handler';
 import 'UIKit/form-password/form-password';
 
-const controls = Object.values(
-  NEW_PASSWORD_PAGE_CONSTANTS.newPasswordFormControls,
-).map((controlID) => {
-  const control = document.getElementById(controlID);
+const controls = [];
+
+const newPasswordForm = document.getElementById(
+  NEW_PASSWORD_PAGE_CONSTANTS.newPasswordForm,
+);
+
+newPasswordForm.querySelectorAll('input').forEach((control) => {
+  controls.push(control);
+});
+newPasswordForm.querySelectorAll('select').forEach((control) => {
+  controls.push(control);
+});
+
+controls.forEach((control) => {
   control.addEventListener('input', (event) => {
     resetError(event.target);
     if (
@@ -20,7 +30,6 @@ const controls = Object.values(
       numbersOnly(event.target);
     }
   });
-  return control;
 });
 
 document
