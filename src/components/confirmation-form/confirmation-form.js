@@ -9,6 +9,9 @@ import { ERRORS } from 'Constants/errors';
 const codeControl = document.getElementById(
   CONFIRMATION_PAGE_CONSTANTS.confirmationFormControls.confirmationCodeControl,
 );
+const signedData = document.getElementById(
+  CONFIRMATION_PAGE_CONSTANTS.confirmationFormControls.confirmationSignedData,
+);
 codeControl.addEventListener('input', () => {
   resetError(codeControl);
   numbersOnly(codeControl);
@@ -21,6 +24,7 @@ document
       handleFormSubmit(
         [codeControl],
         // TODO: изменить url при передаче в back
+        [codeControl, signedData],
         // './moc/confirmation-response-error.json',
         './moc/confirmation-response-success.json',
         confirmationResponseHandler,

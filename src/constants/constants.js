@@ -47,6 +47,7 @@ export const CONFIRMATION_PAGE_CONSTANTS = {
   confirmationForm: 'confirmation-form',
   confirmationFormControls: {
     confirmationCodeControl: 'confirmation-code',
+    confirmationSignedData: 'confirmation-signed-data',
   },
   confirmationForwardButton: 'confirmation-forward-button',
 };
