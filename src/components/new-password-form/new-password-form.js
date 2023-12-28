@@ -2,6 +2,8 @@ import { NEW_PASSWORD_PAGE_CONSTANTS } from 'Constants/constants';
 import { numbersOnly } from 'Utils/masks/numbers-only-mask';
 import { resetError } from 'Utils/errors/reset-error';
 import { newPasswordValidation } from 'Components/new-password-form/_new-password-validation';
+import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
+import { newPasswordResponseHandler } from 'Components/new-password-form/_new-password-response-handler';
 import 'UIKit/form-password/form-password';
 
 const controls = Object.values(
