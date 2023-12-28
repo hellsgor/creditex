@@ -1,4 +1,7 @@
 export function resetError(control) {
+  if (control.type === 'checkbox') {
+    return;
+  }
   const errorElem = control.closest('.form-control')
     ? control.closest('.form-control').querySelector('.form-control__error')
     : control.closest('.form-select').querySelector('.form-select__error');

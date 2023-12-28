@@ -8,13 +8,15 @@ import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { confirmationResponseHandler } from 'Components/confirmation-form/_confirmation-response-handler';
 import { showError } from 'Utils/errors/show-error';
 import { ERRORS } from 'Constants/errors';
+import { getFormControls } from 'Utils/get-form-controls';
 
+const confirmationControls = getFormControls(
+  document.getElementById(CONFIRMATION_PAGE_CONSTANTS.confirmationForm),
+);
 const codeControl = document.getElementById(
   CONFIRMATION_PAGE_CONSTANTS.confirmationFormControls.confirmationCodeControl,
 );
-const signedData = document.getElementById(
-  CONFIRMATION_PAGE_CONSTANTS.confirmationFormControls.confirmationSignedData,
-);
+
 codeControl.addEventListener('input', () => {
   resetError(codeControl);
   numbersOnly(codeControl);
@@ -28,7 +30,7 @@ document
       && codeControl.value.length <= COMMON_CONSTANTS.MAX_SMS_CODE_LENGTH
     ) {
       handleFormSubmit(
-        [codeControl, signedData],
+        confirmationControls,
         // TODO: изменить url и метод при передаче в back
 
         // 'GET'

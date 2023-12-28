@@ -6,7 +6,13 @@ import { showError } from 'Utils/errors/show-error';
 import { ERRORS } from 'Constants/errors';
 import { phoneValidation } from 'Utils/validation/phone-validation';
 import { restorePasswordRequestHandler } from 'Components/restore-password-request-form/_restore-password-request-handler';
+import { getFormControls } from 'Utils/get-form-controls';
 
+const restorePasswordRequestFormControls = getFormControls(
+  document.getElementById(
+    RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS.restorePasswordRequestForm,
+  ),
+);
 const phoneNumberControl = document.getElementById(
   RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS.restorePasswordRequestFormControls
     .restorePasswordPhoneNumber,
@@ -25,9 +31,7 @@ document
   .addEventListener('click', () => {
     if (phoneValidation(phoneNumberControl)) {
       handleFormSubmit(
-        document.getElementById(
-          RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS.restorePasswordRequestForm,
-        ),
+        restorePasswordRequestFormControls,
 
         'GET',
         './moc/restore-password-request-response-error.json',

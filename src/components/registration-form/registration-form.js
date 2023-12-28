@@ -7,21 +7,14 @@ import { registrationValidation } from 'Components/registration-form/_registrati
 import { resetError } from 'Utils/errors/reset-error';
 import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { registrationResponseHandler } from 'Components/registration-form/_registration-response-handler';
+import { getFormControls } from 'Utils/get-form-controls';
 
-const registrationForm = document.getElementById(
-  REGISTRATION_PAGE_CONSTANTS.registrationForm,
+const registrationControls = getFormControls(
+  document.getElementById(REGISTRATION_PAGE_CONSTANTS.registrationForm),
 );
-const registrationControls = [];
 const phoneControl = document.getElementById(
   REGISTRATION_PAGE_CONSTANTS.registrationFormControls.phoneControl,
 );
-
-registrationForm.querySelectorAll('input').forEach((input) => {
-  registrationControls.push(input);
-});
-registrationForm.querySelectorAll('select').forEach((select) => {
-  registrationControls.push(select);
-});
 
 addPhoneMask();
 phoneControl.value = new URLSearchParams(window.location.search).get(
