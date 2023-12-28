@@ -4,11 +4,15 @@ import { AUTHORIZATION_PAGE_CONSTANTS } from 'Constants/constants';
 
 export function authorizationResponseHandler(
   response,
-  controlsArray,
+  controlsArrayOrForm,
   defaultErrorControl = null,
 ) {
   if (!isSuccess(response)) {
-    errorsProcessingFromResponse(response, controlsArray, defaultErrorControl);
+    errorsProcessingFromResponse(
+      response,
+      controlsArrayOrForm,
+      defaultErrorControl,
+    );
   } else {
     window.location.href = document.getElementById(
       AUTHORIZATION_PAGE_CONSTANTS.authorization_form,

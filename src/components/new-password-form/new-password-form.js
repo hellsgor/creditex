@@ -5,11 +5,13 @@ import { newPasswordValidation } from 'Components/new-password-form/_new-passwor
 import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { newPasswordResponseHandler } from 'Components/new-password-form/_new-password-response-handler';
 import 'UIKit/form-password/form-password';
+import { getFormControls } from 'Utils/get-form-controls';
 
-const controls = Object.values(
-  NEW_PASSWORD_PAGE_CONSTANTS.newPasswordFormControls,
-).map((controlID) => {
-  const control = document.getElementById(controlID);
+const newPasswordFormControls = getFormControls(
+  document.getElementById(NEW_PASSWORD_PAGE_CONSTANTS.newPasswordForm),
+);
+
+newPasswordFormControls.forEach((control) => {
   control.addEventListener('input', (event) => {
     resetError(event.target);
     if (
@@ -20,15 +22,14 @@ const controls = Object.values(
       numbersOnly(event.target);
     }
   });
-  return control;
 });
 
 document
   .getElementById(NEW_PASSWORD_PAGE_CONSTANTS.newPasswordChangeButton)
   .addEventListener('click', () => {
-    if (newPasswordValidation(controls)) {
+    if (newPasswordValidation(newPasswordFormControls)) {
       handleFormSubmit(
-        controls,
+        newPasswordFormControls,
         // TODO: актуализировать url при передаче в back
         // 'GET',
         // './moc/new-password-response-error.json',

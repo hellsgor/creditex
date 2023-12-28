@@ -8,24 +8,20 @@ import { ERRORS } from 'Constants/errors';
 import { resetError } from 'Utils/errors/reset-error';
 import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { authorizationResponseHandler } from 'Components/authorization-form/_authorizationResponseHandler';
+import { getFormControls } from 'Utils/get-form-controls';
 
+const authorizationForm = document.getElementById(
+  AUTHORIZATION_PAGE_CONSTANTS.authorization_form,
+);
 const phoneControl = document.getElementById(
   AUTHORIZATION_PAGE_CONSTANTS.phoneControl,
 );
 const passwordControl = document.getElementById(
   AUTHORIZATION_PAGE_CONSTANTS.passwordControl,
 );
+const authorizationFormControls = getFormControls(authorizationForm);
 
-const rememberUserCheckbox = document.getElementById(
-  AUTHORIZATION_PAGE_CONSTANTS.rememberUserCheckbox,
-);
-const authFormControlsArray = [
-  phoneControl,
-  passwordControl,
-  rememberUserCheckbox,
-];
-
-[phoneControl, passwordControl].forEach((control) => {
+authorizationFormControls.forEach((control) => {
   control.addEventListener('input', () => {
     resetError(control);
   });
@@ -36,7 +32,7 @@ document
   .addEventListener('click', (event) => {
     event.preventDefault();
 
-    [phoneControl, passwordControl].forEach((control) => {
+    authorizationFormControls.forEach((control) => {
       resetError(control);
     });
 
@@ -49,10 +45,10 @@ document
 
     if (phoneValidation(phoneControl) && passwordValidation(passwordControl)) {
       handleFormSubmit(
-        authFormControlsArray,
+        authorizationForm,
         // TODO: актуализировать URL и метод при передаче в back
         'GET',
-        './moc/authorization-response-success.json',
+        './moc/authorization-response-error.json',
         authorizationResponseHandler,
         true,
         passwordControl,

@@ -3,6 +3,7 @@ import { showError } from 'Utils/errors/show-error';
 import { ERRORS } from 'Constants/errors';
 import { phoneValidation } from 'Utils/validation/phone-validation';
 import { resetError } from 'Utils/errors/reset-error';
+import { passwordValidation } from 'Utils/validation/password-validation';
 
 export function registrationValidation(controls) {
   let isValid = true;
@@ -45,7 +46,7 @@ export function registrationValidation(controls) {
       === REGISTRATION_PAGE_CONSTANTS.registrationFormControls.passwordControl
     ) {
       resetError(control);
-      if (!/^(?=.*[0-9])(?=.*[A-Z])\w{8,30}$/m.test(control.value)) {
+      if (!passwordValidation(control)) {
         isValid = false;
         showError(ERRORS.CE005(), control);
       }
