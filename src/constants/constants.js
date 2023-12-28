@@ -51,6 +51,15 @@ export const CONFIRMATION_PAGE_CONSTANTS = {
   confirmationForwardButton: 'confirmation-forward-button',
 };
 
+export const RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS = {
+  restorePasswordRequestForm: 'restore-password-request-form',
+  restorePasswordRequestFormControls: {
+    restorePasswordPhoneNumber: 'restore-password-phone-number',
+  },
+  restorePasswordRequestForwardButton:
+    'restore-password-request-forward-button',
+};
+
 export const COMMON_CONSTANTS = {
   MAX_PASSWORD_LENGTH: 40,
   MIN_PASSWORD_LENGTH: 8,

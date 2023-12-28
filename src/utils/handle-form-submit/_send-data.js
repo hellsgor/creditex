@@ -1,16 +1,26 @@
-export async function sendData(data, url, waitResponse) {
+export async function sendData(method, data, url, waitResponse) {
+  let responseJSON = null;
+  const params = {
+    headers: { 'Content-type': 'application/json; charset=UTF-8' },
+    method,
+  };
+
+  if (method === 'POST') {
+    params.body = JSON.stringify(data);
+  }
+
   try {
-    const response = await fetch(url, {
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-      method: 'GET', // 'POST'
-      // body: data,
-    });
+    const response = await fetch(url, params);
+
     if (waitResponse) {
-      return await response.json();
+      if (response.redirected) {
+        window.location.href = response.url;
+      }
+      responseJSON = await response.json();
     }
+    return responseJSON;
   } catch (e) {
     console.error(e);
+    return responseJSON;
   }
 }
