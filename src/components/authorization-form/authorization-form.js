@@ -49,10 +49,12 @@ document
 
     if (phoneValidation(phoneControl) && passwordValidation(passwordControl)) {
       handleFormSubmit(
-        authFormControlsArray,
+        document.getElementById(
+          AUTHORIZATION_PAGE_CONSTANTS.authorization_form,
+        ),
         // TODO: актуализировать URL и метод при передаче в back
         'GET',
-        './moc/authorization-response-success.json',
+        './moc/authorization-response-error.json',
         authorizationResponseHandler,
         true,
         passwordControl,

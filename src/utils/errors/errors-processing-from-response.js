@@ -3,11 +3,11 @@ import { showError } from 'Utils/errors/show-error';
 
 export function errorsProcessingFromResponse(
   response,
-  controlsArray,
+  controlsArrayOrForm,
   defaultErrorControl = null,
 ) {
-  if (Array.isArray(controlsArray)) {
-    controlsArray.forEach((control) => {
+  if (Array.isArray(controlsArrayOrForm)) {
+    controlsArrayOrForm.forEach((control) => {
       control.removeAttribute('readonly');
       response['error-info'].forEach((controlError) => {
         if (controlError['control-name'] === control.name) {
@@ -26,5 +26,14 @@ export function errorsProcessingFromResponse(
         }
       });
     });
+  } else {
+    const controlsArray = [];
+    controlsArrayOrForm.querySelectorAll('input').forEach((input) => {
+      controlsArray.push(input);
+    });
+    controlsArrayOrForm.querySelectorAll('select').forEach((select) => {
+      controlsArray.push(select);
+    });
+    errorsProcessingFromResponse(response, controlsArray, defaultErrorControl);
   }
 }
