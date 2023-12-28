@@ -16,6 +16,7 @@ module.exports = {
     confirmation: './src/pages/confirmation/confirmation.pug',
     restorePasswordPhoneNumberRequest:
       './src/pages/restore-password-request/restore-password-request.pug',
+    newPassword: './src/pages/new-password/new-password.pug',
     uiKit: './src/pages/ui-kit/ui-kit.pug',
   },
   output: {
