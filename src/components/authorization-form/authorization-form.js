@@ -50,7 +50,8 @@ document
     if (phoneValidation(phoneControl) && passwordValidation(passwordControl)) {
       handleFormSubmit(
         authFormControlsArray,
-        // TODO: актуализировать URL при передаче в back
+        // TODO: актуализировать URL и метод при передаче в back
+        'GET',
         './moc/authorization-response-success.json',
         authorizationResponseHandler,
         true,
