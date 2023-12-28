@@ -61,6 +61,16 @@ export const RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS = {
     'restore-password-request-forward-button',
 };
 
+export const NEW_PASSWORD_PAGE_CONSTANTS = {
+  newPasswordForm: 'new-password-form',
+  newPasswordFormControls: {
+    newPasswordConfirmationCodeControl: 'new-password-confirmation-code',
+    newPasswordControl: 'new-password-password',
+    newPasswordRepeatControl: 'new-password-password-repeat',
+  },
+  newPasswordChangeButton: 'new-password-change-password-button',
+};
+
 export const COMMON_CONSTANTS = {
   MAX_PASSWORD_LENGTH: 40,
   MIN_PASSWORD_LENGTH: 8,
