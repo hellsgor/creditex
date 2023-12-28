@@ -1,3 +1,4 @@
 {
-  "status": "success"
+  "status": "success",
+  "SIGNED_DATA": "some-string-from-back"
 }

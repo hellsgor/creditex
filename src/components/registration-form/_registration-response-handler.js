@@ -6,8 +6,9 @@ export function registrationResponseHandler(response, controlsArray) {
   if (!isSuccess(response)) {
     errorsProcessingFromResponse(response, controlsArray);
   } else {
-    window.location.href = document.getElementById(
-      REGISTRATION_PAGE_CONSTANTS.registrationForm,
-    ).dataset.locationHref;
+    window.location.href = `${
+      document.getElementById(REGISTRATION_PAGE_CONSTANTS.registrationForm)
+        .dataset.locationHref
+    }?signedData=${response.SIGNED_DATA ? response.SIGNED_DATA : ''}`;
   }
 }

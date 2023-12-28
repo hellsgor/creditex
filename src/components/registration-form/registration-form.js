@@ -44,7 +44,8 @@ document
     if (registrationValidation(registrationControls)) {
       handleFormSubmit(
         registrationControls,
-        // TODO: Изменить url при передаче в бэк
+        // TODO: Изменить url и метод при передаче в бэк
+        'GET',
         './moc/registration-response-success.json',
         registrationResponseHandler,
         true,

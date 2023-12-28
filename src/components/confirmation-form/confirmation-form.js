@@ -9,6 +9,9 @@ import { ERRORS } from 'Constants/errors';
 const codeControl = document.getElementById(
   CONFIRMATION_PAGE_CONSTANTS.confirmationFormControls.confirmationCodeControl,
 );
+const signedData = document.getElementById(
+  CONFIRMATION_PAGE_CONSTANTS.confirmationFormControls.confirmationSignedData,
+);
 codeControl.addEventListener('input', () => {
   resetError(codeControl);
   numbersOnly(codeControl);
@@ -19,10 +22,15 @@ document
   .addEventListener('click', () => {
     if (codeControl.value.length && codeControl.value.length <= 8) {
       handleFormSubmit(
-        [codeControl],
-        // TODO: изменить url при передаче в back
+        [codeControl, signedData],
+        // TODO: изменить url и метод при передаче в back
+
+        // 'GET'
         // './moc/confirmation-response-error.json',
-        './moc/confirmation-response-success.json',
+
+        'POST',
+        'http://localhost:4000/endpoint',
+
         confirmationResponseHandler,
         true,
       );

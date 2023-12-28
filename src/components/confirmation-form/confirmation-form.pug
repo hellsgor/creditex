@@ -1,4 +1,4 @@
-form.confirmation-form(id='confirmation-form', name='confirmation-form', data-location-href='./lk-broker.html')
+form.confirmation-form(id='confirmation-form', name='confirmation-form')
   .confirmation-form__title
     h4 Введите код из СМС
     p Мы отправили его вам на номер указанный шагом раньше
@@ -6,6 +6,7 @@ form.confirmation-form(id='confirmation-form', name='confirmation-form', data-lo
   .confirmation-form__inner
     include UIKit/form-control/form-control.pug
     +form-control('text', 'confirmation-code', 'Код из смс')(class='confirmation-form__code-control')
+    input(type='hidden', id='confirmation-signed-data', name='SIGNED_DATA')
     .confirmation-form__buttons
       include UIKit/button/button.pug
       +button('confirmation-step-back-button', 'javascript:history.back()', 'button', 'transparent', 'Назад')(class='confirmation-form__step-back-button')
