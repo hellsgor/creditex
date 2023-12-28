@@ -25,7 +25,9 @@ document
   .addEventListener('click', () => {
     if (phoneValidation(phoneNumberControl)) {
       handleFormSubmit(
-        [phoneNumberControl],
+        document.getElementById(
+          RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS.restorePasswordRequestForm,
+        ),
 
         'GET',
         './moc/restore-password-request-response-error.json',
