@@ -13,3 +13,21 @@ block scripts
   script(src=require('./broker-lk.js') defer)
 
 block content
+  .container_user-account
+    include Components/user-data-block/user-data-block.pug
+    +user-data-block('Показатели', [
+      {
+        id: 'submit-application-button',
+        href: './add-bid-step-1.html',
+        type: '',
+        visualType: 'primary',
+        text: 'Завести заявку',
+      },
+      {
+        id: 'referral-link-copy-button',
+        href: '',
+        type: 'button',
+        visualType: 'primary',
+        text: 'Реферальная ссылка',
+      },
+    ])

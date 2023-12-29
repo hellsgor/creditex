@@ -1,0 +1,12 @@
+@import 'UIKit/button/button.scss';
+
+.user-data-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  &__buttons {
+    display: flex;
+    column-gap: 16px;
+  }
+}
