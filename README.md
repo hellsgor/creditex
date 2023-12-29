@@ -20,15 +20,27 @@ Freelance project
 
 Публикация из ветки gh-pages.
 
+### Публичные страницы:
+
 * Главная страница - https://hellsgor.github.io/creditex/;
 * Предпринимателям - https://hellsgor.github.io/creditex/entrepreneur.html;
-* Партнёрам - https://hellsgor.github.io/creditex/partners.html;
+* Партнёрам - https://hellsgor.github.io/creditex/partners.html.
+
+### Вход в ЛК:
+
 * Авторизация - https://hellsgor.github.io/creditex/authorization.html;
 * Регистрация - https://hellsgor.github.io/creditex/registration.html;
 * Подтверждение по SMS - https://hellsgor.github.io/creditex/confirmation.html;
 * Запрос восстановления
   пароля - https://hellsgor.github.io/creditex/restorePasswordPhoneNumberRequest.html;
-* Новый пароль - https://hellsgor.github.io/creditex/newPassword.html;
+* Новый пароль - https://hellsgor.github.io/creditex/newPassword.html.
+
+### Личный кабинет:
+
+* Пустой ЛК - https://hellsgor.github.io/creditex/emptyLk.html.
+
+### Служебные страницы:
+
 * UI-kit - https://hellsgor.github.io/creditex/uiKit.html.
 
 ---
