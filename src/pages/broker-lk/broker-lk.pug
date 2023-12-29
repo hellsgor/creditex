@@ -1,0 +1,15 @@
+extends Layouts/user-account-pages-layout/user-account-pages-layout.pug
+
+block variables
+  - let title = 'Broker LK';
+  - let username = 'ИП Шпутненко Кирилл Сергеевич';
+  - let footer = true;
+  - let pageClassName = 'broker-lk';
+
+block styles
+  link(href=require('./broker-lk.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./broker-lk.js') defer)
+
+block content
