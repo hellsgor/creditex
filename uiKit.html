@@ -20,7 +20,7 @@
             disabled>Disabled Secondary</button><button class="button button_transparent" type="button"
             id="test-button-transparent">Transparent Button</button><button class="button button_transparent"
             type="button" id="test-button-transparent-disabled" disabled>Disabled Transparent Button</button><a
-            class="button button_link" href="#">Looks like a link</a></div>
+            class="button button_link" id="test-button-link" href="#">Looks like a link</a></div>
         <h2>Input</h2>
         <div class="form-control"><input class="form-control__input" type="tel" id="test-input-name"
             name="test-input-name" placeholder="Телефон"><span class="error form-control__error">Текст ошибки</span>
@@ -53,6 +53,17 @@
         <div class="legend-item">
           <div class="legend-item__color" style="background-color: #e5e5e5"></div><span
             class="legend-item__text">Проценты</span>
+        </div>
+        <h2>Checkbox</h2><label class="form-checkbox" for="example-checkbox"><input type="checkbox"
+            id="example-checkbox" name="example-checkbox"><span>Test checkbox</span></label>
+        <h2>Select</h2>
+        <div class="form-select"><select id="example-select" name="example-select">
+            <option disabled selected value="">Choose some...</option>
+            <option value="1">option 1</option>
+            <option value="2">option 2</option>
+            <option value="3">option 3</option>
+          </select>
+          <div class="form-select__arrow"></div><span class="error form-select__error">Текст ошибки</span>
         </div>
       </div>
     </main>
