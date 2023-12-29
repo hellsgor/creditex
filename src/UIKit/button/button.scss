@@ -17,6 +17,11 @@
   line-height: normal;
   cursor: pointer;
 
+  &_wide {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
   &_primary {
     background-color: $black-2;
     color: $white-1;
