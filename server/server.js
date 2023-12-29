@@ -4,7 +4,6 @@ const cors = require('cors');
 const startServer = (port, location) => {
   const app = express();
 
-  // Используем middleware для установки CORS заголовков
   app.use(
     cors({
       origin: '*',
@@ -14,9 +13,7 @@ const startServer = (port, location) => {
     }),
   );
 
-  // Обработчик POST-запросов
   app.post('/endpoint', (req, res) => {
-    // Логика обработки POST-запроса, например, отправка статуса 302
     res.status(302);
     res.header('Location', `http://localhost:4000${location}`);
     res.header('Access-Control-Allow-Origin', '*'); // Добавленная строка
@@ -25,7 +22,6 @@ const startServer = (port, location) => {
   });
 
   app.post('/', (req, res) => {
-    // Логика обработки POST-запроса, например, отправка статуса 302
     res.status(200);
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Credentials', 'true'); // Добавленная строка
@@ -33,7 +29,6 @@ const startServer = (port, location) => {
   });
 
   app.get('/', (req, res) => {
-    // Логика обработки POST-запроса, например, отправка статуса 302
     res.status(200);
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Credentials', 'true'); // Добавленная строка
