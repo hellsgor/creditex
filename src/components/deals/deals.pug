@@ -1,0 +1,9 @@
+section.section.deals
+  .section__header.deals__header
+    .section__item.deals__header-left-side
+      h5 Сделки по заемщикам
+      .deals__filter
+        include UIKit/button/button.pug
+        +button('approved-filter-link', '#', '', 'filter', 'Одобренные')
+        +button('active-filter-link', '#', '', 'filter-selected', 'Активные')
+        +button('rejected-filter-link', '#', '', 'filter', 'Отклоненные')

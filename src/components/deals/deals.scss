@@ -1,0 +1,21 @@
+@import 'UIKit/button/button.scss';
+
+.deals {
+  div.deals__header {
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__header-left-side {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+  }
+
+  &__filter {
+    display: flex;
+    column-gap: 24px;
+  }
+}
