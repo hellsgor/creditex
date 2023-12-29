@@ -71,6 +71,10 @@ export const NEW_PASSWORD_PAGE_CONSTANTS = {
   newPasswordChangeButton: 'new-password-change-password-button',
 };
 
+export const BROKER_LK_PAGE = {
+  copyReferralLinkButton: 'referral-link-copy-button',
+};
+
 export const COMMON_CONSTANTS = {
   MIN_PASSWORD_LENGTH: 6,
   MAX_SMS_CODE_LENGTH: 8,
