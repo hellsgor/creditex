@@ -4,6 +4,15 @@
   color: $black-1;
 }
 
+@mixin filter {
+  padding: 0;
+  border: none;
+  border-radius: unset;
+  font-weight: 300;
+  background-color: transparent;
+  min-height: unset;
+}
+
 .button {
   width: fit-content;
   height: fit-content;
@@ -59,6 +68,17 @@
     align-items: center;
     column-gap: 4px;
     @include transparent-button;
+  }
+
+  &_filter {
+    @include filter;
+    text-decoration-line: underline;
+    color: $blue;
+  }
+
+  &_filter-selected {
+    @include filter;
+    color: $black-1;
   }
 
 
