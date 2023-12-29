@@ -8,6 +8,7 @@ const isDev = process.env.NODE_ENV === 'development';
 module.exports = {
   mode: 'development',
   entry: {
+    uiKit: './src/pages/ui-kit/ui-kit.pug',
     index: './src/pages/main/main.pug',
     entrepreneur: './src/pages/entrepreneur/entrepreneur.pug',
     partners: './src/pages/partners/partners.pug',
@@ -17,7 +18,7 @@ module.exports = {
     restorePasswordPhoneNumberRequest:
       './src/pages/restore-password-request/restore-password-request.pug',
     newPassword: './src/pages/new-password/new-password.pug',
-    uiKit: './src/pages/ui-kit/ui-kit.pug',
+    emptyLk: './src/pages/empty-lk/empty-lk.pug',
   },
   output: {
     filename: 'assets/js/[name].js',
