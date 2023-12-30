@@ -17,13 +17,29 @@ body {
   flex: 1 0 auto;
 
   .section {
-    &:last-child {
-      margin-bottom: 0;
+    $left-right-paddings: 30px;
+
+    padding: 20px 0;
+    border-radius: $radius-bit-less;
+    margin-bottom: 14px;
+    background-color: $white-1;
+
+    &:first-child {
+      margin-top: 32px;
     }
 
-    &__wrapper {
-      overflow: hidden;
-      border-radius: $radius;
+    &:last-child {
+      margin-bottom: 58px;
+    }
+
+    &__header {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $gray-12;
+    }
+
+    &__item {
+      padding-right: $left-right-paddings;
+      padding-left: $left-right-paddings;
     }
   }
 }

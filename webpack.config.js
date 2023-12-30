@@ -19,6 +19,7 @@ module.exports = {
       './src/pages/restore-password-request/restore-password-request.pug',
     newPassword: './src/pages/new-password/new-password.pug',
     emptyLk: './src/pages/empty-lk/empty-lk.pug',
+    brokerLk: './src/pages/broker-lk/broker-lk.pug',
   },
   output: {
     filename: 'assets/js/[name].js',

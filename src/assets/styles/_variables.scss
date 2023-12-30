@@ -9,6 +9,7 @@ $black-2: #0d0b0d;
 $black-3: #080707;
 $black-4: #12141d;
 $black-5: #262726;
+$black-6: #212121;
 
 $olive-gray: #d5e2e3; // фон блока "Зарегистрироваться"
 
@@ -31,6 +32,7 @@ $gray-16: #fbfbfb;
 $gray-17: #333;
 $gray-18: #dbdbdb;
 $gray-19: #b7b7b7;
+$gray-20: #f5f6f8;
 
 $yellow-green-1: #e7f79b;
 $yellow-green-2: #dcf472;
@@ -41,10 +43,15 @@ $green-2: #52c41a; // текст статуса "одобрено" в ЛК
 $green-3: #b7eb8f; // бордер статуса "одобрено" в ЛК
 $green-4: #f6ffed; // фон статуса "одобрено" в ЛК
 
-$red: #e25140;
+$red-1: #e25140;
+$red-2: #ffa39e;
+$red-3: #fff1f0;
 
 $orange: #febb0c;
-$blue: #1890ff;
+
+$blue-1: #1890ff;
+$blue-2: #adc6ff;
+$blue-3: #f0f5ff;
 
 // background colors
 $background-1: $white-1;
@@ -54,6 +61,7 @@ $background-4: $yellow-green-1;
 $background-5: $yellow-green-2;
 
 // radius
+$radius-extra-small: 2px;
 $radius-small: 4px;
 $radius-bit-less: 8px;
 $radius-medium: 16px;

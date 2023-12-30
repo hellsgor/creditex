@@ -4,6 +4,22 @@
   color: $black-1;
 }
 
+@mixin filter {
+  padding: 0;
+  border: none;
+  border-radius: unset;
+  background-color: transparent;
+  min-height: unset;
+}
+
+@mixin sort {
+  @include filter;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  font-weight: 400;
+}
+
 .button {
   width: fit-content;
   height: fit-content;
@@ -16,6 +32,11 @@
   font-weight: 500;
   line-height: normal;
   cursor: pointer;
+
+  &_wide {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
 
   &_primary {
     background-color: $black-2;
@@ -56,5 +77,26 @@
     @include transparent-button;
   }
 
+  &_filter {
+    @include filter;
+    font-weight: 300;
+    text-decoration-line: underline;
+    color: $blue-1;
+  }
 
+  &_filter-selected {
+    @include filter;
+    font-weight: 300;
+    color: $black-1;
+  }
+
+  &_sort {
+    @include sort;
+  }
+
+  &_sort-reverse {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
 }
