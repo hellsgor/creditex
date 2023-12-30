@@ -8,9 +8,16 @@
   padding: 0;
   border: none;
   border-radius: unset;
-  font-weight: 300;
   background-color: transparent;
   min-height: unset;
+}
+
+@mixin sort {
+  @include filter;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  font-weight: 400;
 }
 
 .button {
@@ -72,14 +79,24 @@
 
   &_filter {
     @include filter;
+    font-weight: 300;
     text-decoration-line: underline;
     color: $blue-1;
   }
 
   &_filter-selected {
     @include filter;
+    font-weight: 300;
     color: $black-1;
   }
 
+  &_sort {
+    @include sort;
+  }
 
+  &_sort-reverse {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
 }
