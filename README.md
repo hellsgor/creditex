@@ -37,7 +37,8 @@ Freelance project
 
 ### Личный кабинет:
 
-* Пустой ЛК - https://hellsgor.github.io/creditex/emptyLk.html.
+* Пустой ЛК - https://hellsgor.github.io/creditex/emptyLk.html;
+* Брокер, сделки - https://hellsgor.github.io/creditex/brokerLk.
 
 ### Служебные страницы:
 
