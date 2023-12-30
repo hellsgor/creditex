@@ -30,13 +30,8 @@ document
     if (newPasswordValidation(newPasswordFormControls)) {
       handleFormSubmit(
         newPasswordFormControls,
-        // TODO: актуализировать url при передаче в back
-        // 'GET',
-        // './moc/new-password-response-error.json',
-
         'POST',
-        'http://localhost:4000/endpoint',
-
+        './auth/?change_password=yes',
         newPasswordResponseHandler,
         true,
       );

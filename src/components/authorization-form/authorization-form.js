@@ -46,9 +46,8 @@ document
     if (phoneValidation(phoneControl) && passwordValidation(passwordControl)) {
       handleFormSubmit(
         authorizationForm,
-        // TODO: актуализировать URL и метод при передаче в back
-        'GET',
-        './moc/authorization-response-error.json',
+        'POST',
+        './auth/',
         authorizationResponseHandler,
         true,
         passwordControl,
