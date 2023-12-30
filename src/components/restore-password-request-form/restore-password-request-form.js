@@ -32,13 +32,8 @@ document
     if (phoneValidation(phoneNumberControl)) {
       handleFormSubmit(
         restorePasswordRequestFormControls,
-
-        'GET',
-        './moc/restore-password-request-response-error.json',
-
-        // 'POST',
-        // 'http://localhost:4000/endpoint',
-
+        'POST',
+        './auth/?forgot_password=yes',
         restorePasswordRequestHandler,
         true,
       );
