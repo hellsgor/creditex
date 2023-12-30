@@ -1,0 +1,1 @@
+!function(){"use strict";const t=document.getElementById("referral-link-copy-button");t.addEventListener("click",(()=>{var e;e=t.dataset.refLink,navigator.clipboard.writeText(e),t.textContent="Ссылка скопирована"}))}();
