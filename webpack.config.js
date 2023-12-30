@@ -20,6 +20,7 @@ module.exports = {
     newPassword: './src/pages/new-password/new-password.pug',
     emptyLk: './src/pages/empty-lk/empty-lk.pug',
     brokerLk: './src/pages/broker-lk/broker-lk.pug',
+    personalData: './src/pages/personal-data/personal-data.pug',
   },
   output: {
     filename: 'assets/js/[name].js',
