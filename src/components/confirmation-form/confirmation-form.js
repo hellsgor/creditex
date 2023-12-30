@@ -31,14 +31,8 @@ document
     ) {
       handleFormSubmit(
         confirmationControls,
-        // TODO: изменить url и метод при передаче в back
-
-        // 'GET'
-        // './moc/confirmation-response-error.json',
-
         'POST',
-        'http://localhost:4000/endpoint',
-
+        './auth/?register=yes',
         confirmationResponseHandler,
         true,
       );
