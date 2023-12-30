@@ -53,3 +53,10 @@ block content
       {text: 'option 2', value: '2'},
       {text: 'option 3', value: '3'},
     ], 'Choose some...')
+
+    h2 Deals status
+    .ui-kit__component-container.ui-kit__component-container_gorizontal
+      include UIKit/deal-status/deal-status.pug
+      +deal-status('Одобрено', 'green')
+      +deal-status('Активная', 'blue')
+      +deal-status('Отклонённая', 'red')

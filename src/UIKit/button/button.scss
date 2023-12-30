@@ -73,7 +73,7 @@
   &_filter {
     @include filter;
     text-decoration-line: underline;
-    color: $blue;
+    color: $blue-1;
   }
 
   &_filter-selected {
