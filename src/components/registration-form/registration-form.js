@@ -45,9 +45,8 @@ document
     if (registrationValidation(registrationControls)) {
       handleFormSubmit(
         registrationControls,
-        // TODO: Изменить url и метод при передаче в бэк
-        'GET',
-        './moc/registration-response-success.json',
+        'POST',
+        './auth/?register=yes',
         registrationResponseHandler,
         true,
       );
