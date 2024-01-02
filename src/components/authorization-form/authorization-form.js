@@ -47,7 +47,7 @@ document
       handleFormSubmit(
         authorizationForm,
         'POST',
-        './auth/',
+        '/auth/',
         authorizationResponseHandler,
         true,
         passwordControl,

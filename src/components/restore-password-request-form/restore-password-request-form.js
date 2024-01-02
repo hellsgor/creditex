@@ -33,7 +33,7 @@ document
       handleFormSubmit(
         restorePasswordRequestFormControls,
         'POST',
-        './auth/?forgot_password=yes',
+        '/auth/?forgot_password=yes',
         restorePasswordRequestHandler,
         true,
       );

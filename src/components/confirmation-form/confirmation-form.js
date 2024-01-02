@@ -32,7 +32,7 @@ document
       handleFormSubmit(
         confirmationControls,
         'POST',
-        './auth/?register=yes',
+        '/auth/?register=yes',
         confirmationResponseHandler,
         true,
       );

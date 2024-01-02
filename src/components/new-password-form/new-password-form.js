@@ -31,7 +31,7 @@ document
       handleFormSubmit(
         newPasswordFormControls,
         'POST',
-        './auth/?change_password=yes',
+        '/auth/?change_password=yes',
         newPasswordResponseHandler,
         true,
       );

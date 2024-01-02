@@ -46,7 +46,7 @@ document
       handleFormSubmit(
         registrationControls,
         'POST',
-        './auth/?register=yes',
+        '/auth/?register=yes',
         registrationResponseHandler,
         true,
       );
