@@ -16,8 +16,8 @@ export function serializeData(controlsArrayOrForm) {
     data = new FormData(controlsArrayOrForm);
   }
   // console.log(data);
-  data.forEach((value, key) => {
-    console.log(`serializeData: ${key} - ${value}`);
-  });
+  // data.forEach((value, key) => {
+  //   console.log(`serializeData: ${key} - ${value}`);
+  // });
   return data;
 }
