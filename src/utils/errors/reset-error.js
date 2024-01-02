@@ -1,5 +1,5 @@
 export function resetError(control) {
-  if (control.type === 'checkbox') {
+  if (control.type === 'checkbox' || control.type === 'hidden') {
     return;
   }
   const errorElem = control.closest('.form-control')
