@@ -13,4 +13,6 @@ block scripts
   script(src=require('./new-application.js') defer)
 
 block content
-
+  .container_user-account
+    include Components/form-steps/form-steps.pug
+    +form-steps(['Заведение заявки', 'Загрузка данных', 'Решение'])
