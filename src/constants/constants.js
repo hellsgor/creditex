@@ -88,6 +88,7 @@ export const NEW_APPLICATION_PAGE = {
   },
   sections: {
     step1: 'step-1',
+    step2: 'step-2',
   },
 };
 

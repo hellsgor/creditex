@@ -31,5 +31,12 @@ document
     const isStep1Valid = step1Validation(
       getControls(document.getElementById(NEW_APPLICATION_PAGE.sections.step1)),
     );
-    console.log(isStep1Valid);
+    if (isStep1Valid) {
+      document
+        .getElementById(NEW_APPLICATION_PAGE.sections.step1)
+        .classList.add('visually-hidden');
+      document
+        .getElementById(NEW_APPLICATION_PAGE.sections.step2)
+        .classList.remove('visually-hidden');
+    }
   });
