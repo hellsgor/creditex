@@ -6,7 +6,7 @@ export async function sendData(method, data, url, waitResponse) {
   };
 
   if (method === 'POST') {
-    params.body = JSON.stringify(data);
+    params.body = JSON.stringify(Object.fromEntries(data.entries()));
   }
 
   try {
