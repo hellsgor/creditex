@@ -1,0 +1,16 @@
+extends Layouts/user-account-pages-layout/user-account-pages-layout.pug
+
+block variables
+  - let title = 'New application';
+  - let username = 'ИП Шпутненко Кирилл Сергеевич';
+  - let footer = true;
+  - let pageClassName = 'new-application';
+
+block styles
+  link(href=require('./new-application.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./new-application.js') defer)
+
+block content
+

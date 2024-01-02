@@ -21,6 +21,7 @@ module.exports = {
     emptyLk: './src/pages/empty-lk/empty-lk.pug',
     brokerLk: './src/pages/broker-lk/broker-lk.pug',
     personalData: './src/pages/personal-data/personal-data.pug',
+    newApplication: './src/pages/new-application/new-application.pug',
   },
   output: {
     filename: 'assets/js/[name].js',
