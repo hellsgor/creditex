@@ -1,17 +1,16 @@
-export function resetError(control) {
-  if (control.type === 'checkbox' || control.type === 'hidden') {
-    return;
-  }
-  const errorElem = control.closest('.form-control')
-    ? control.closest('.form-control').querySelector('.form-control__error')
-    : control.closest('.form-select').querySelector('.form-select__error');
+import { getErrorElement } from 'Utils/errors/get-error-element';
 
-  if (
-    errorElem.classList.contains('error_fade')
-    && errorElem.classList.contains('error_block')
-  ) {
-    errorElem.classList.remove('error_fade');
-    errorElem.classList.remove('error_block');
-    errorElem.textContent = '';
+export function resetError(control) {
+  const errorElem = getErrorElement(control);
+
+  if (errorElem) {
+    if (
+      errorElem.classList.contains('error_fade')
+      && errorElem.classList.contains('error_block')
+    ) {
+      errorElem.classList.remove('error_fade');
+      errorElem.classList.remove('error_block');
+      errorElem.textContent = '';
+    }
   }
 }

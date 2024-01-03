@@ -1,12 +1,10 @@
+import { getErrorElement } from 'Utils/errors/get-error-element';
+
 export function showError(errorFunc, control) {
-  if (control.type === 'checkbox' || control.type === 'hidden') {
-    return;
+  const errorElem = getErrorElement(control);
+
+  if (errorElem) {
+    errorElem.textContent = errorFunc;
+    errorElem.classList.add('error_block', 'error_fade');
   }
-
-  const errorElem = control.closest('.form-control')
-    ? control.closest('.form-control').querySelector('.form-control__error')
-    : control.closest('.form-select').querySelector('.form-select__error');
-
-  errorElem.textContent = errorFunc;
-  errorElem.classList.add('error_block', 'error_fade');
 }

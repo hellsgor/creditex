@@ -4,6 +4,7 @@ import { numbersOnly } from 'Utils/masks/numbers-only-mask';
 import { addPhoneMask } from 'Utils/masks/phone-mask';
 import { resetError } from 'Utils/errors/reset-error';
 import { step1Validation } from './_step-1-validation';
+import 'UIKit/form-file-upload/form-file-upload';
 
 const form = document.getElementById(NEW_APPLICATION_PAGE.formId);
 

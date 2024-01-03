@@ -1,3 +1,5 @@
+@import 'UIKit/form-control-error/form-control-error.scss';
+
 .form-file-upload {
   position: relative;
   display: flex;
@@ -66,5 +68,9 @@
         }
       }
     }
+  }
+
+  &__error {
+
   }
 }

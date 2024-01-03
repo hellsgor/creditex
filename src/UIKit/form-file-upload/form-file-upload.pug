@@ -1,5 +1,5 @@
 mixin form-file-upload(idAndName, fileExtensions, fileSize, emptyText, isMultiple=false)
-  label.form-file-upload(for=idAndName)(id='drag-zone')
+  label.form-file-upload(for=idAndName)(id='drop-zone')
     input.visually-hidden(id=idAndName, name=idAndName, type='file', multiple=isMultiple, accept=fileExtensions.map(item => `.${item}`).join(', '), size=fileSize * 1024 * 1024, aria-describedby="hint")
     .form-file-upload__icon
       include Components/svg-icon/svg-icon.pug
@@ -16,8 +16,11 @@ mixin form-file-upload(idAndName, fileExtensions, fileSize, emptyText, isMultipl
         p
           span Максимальный размер #{isMultiple ? 'файлов' : 'файла'} – #{fileSize}МБ
     .form-file-upload__text.form-file-upload__text_loaded.form-file-upload__text_hidden(id='loaded')
+    template(id='loaded-file-template')
       .form-file-upload__loaded-file
-        p some text
+        p
         .form-file-upload__delete
           include Components/svg-icon/svg-icon.pug
           +svgIcon('delete')
+    include UIKit/form-control-error/form-control-error.pug
+    +form-control-error()(class='form-file-upload__error')
