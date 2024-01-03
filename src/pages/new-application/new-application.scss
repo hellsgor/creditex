@@ -2,6 +2,7 @@
 
 @import 'UIKit/form-control/form-control.scss';
 @import 'UIKit/button/button.scss';
+@import 'UIKit/form-file-upload/form-file-upload.scss';
 
 @import 'Components/form-steps/form-steps.scss';
 
@@ -18,6 +19,12 @@
     &_step-1 {
       .new-application__controls-group {
         max-width: 459px;
+      }
+    }
+
+    &_step-2 {
+      .new-application__controls-group {
+        max-width: 824px;
       }
     }
   }

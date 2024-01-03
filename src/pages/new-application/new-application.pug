@@ -35,4 +35,5 @@ block content
         //.visually-hidden
         .new-application__form-section-wrapper
           .new-application__controls-group
-
+            include UIKit/form-file-upload/form-file-upload.pug
+            +form-file-upload('statement-from-the-bank', ['xl', '1C'], 5, 'Кликните на пустую область или перетащите файл (')

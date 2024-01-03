@@ -1,0 +1,70 @@
+.form-file-upload {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 207px;
+  padding: 55px;
+  border-radius: $radius-bit-less;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 140%;
+  background-color: $gray-22;
+  row-gap: 8px;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $black-1;
+    row-gap: 4px;
+
+    &_empty {
+      color: $gray-23;
+    }
+
+    &_loaded {
+      position: absolute;
+      top: 109px;
+      left: 50%;
+      z-index: 10;
+      transform: translateX(-50%);
+    }
+
+    &_hidden {
+      z-index: -10000;
+      visibility: hidden;
+      transform: scale(0);
+    }
+  }
+
+
+  &__loaded-file {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+  }
+
+  &__delete {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    svg path {
+      transition: fill .3s ease-in-out;
+      fill: $gray-23;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        svg path {
+          fill: $black-1;
+        }
+      }
+    }
+  }
+}
