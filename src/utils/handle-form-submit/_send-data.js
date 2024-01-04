@@ -1,12 +1,11 @@
 export async function sendData(method, data, url, waitResponse) {
   let responseJSON = null;
   const params = {
-    headers: { 'Content-type': 'application/json; charset=UTF-8' },
     method,
   };
 
   if (method === 'POST') {
-    params.body = JSON.stringify(Object.fromEntries(data.entries()));
+    params.body = data;
   }
 
   try {

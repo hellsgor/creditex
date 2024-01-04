@@ -1,0 +1,47 @@
+@import 'Layouts/user-account-pages-layout/user-account-pages-layout.scss';
+
+@import 'UIKit/form-control/form-control.scss';
+@import 'UIKit/button/button.scss';
+@import 'UIKit/form-file-upload/form-file-upload.scss';
+
+@import 'Components/form-steps/form-steps.scss';
+
+.new-application {
+  padding-top: 32px;
+
+  &__form-section {
+    padding: 50px;
+    border-bottom-left-radius: $radius-bit-less;
+    border-bottom-right-radius: $radius-bit-less;
+    margin-bottom: 60px;
+    background-color: $white-1;
+
+    &_step-1 {
+      .new-application__controls-group {
+        max-width: 459px;
+      }
+    }
+
+    &_step-2 {
+      .new-application__controls-group {
+        max-width: 824px;
+      }
+    }
+  }
+
+  &__form-section-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__controls-group {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 24px;
+  }
+}

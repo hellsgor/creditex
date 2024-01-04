@@ -75,6 +75,23 @@ export const BROKER_LK_PAGE = {
   copyReferralLinkButton: 'referral-link-copy-button',
 };
 
+export const NEW_APPLICATION_PAGE = {
+  formId: 'new-application-form',
+  controlsIds: {
+    inn: 'inn',
+    fio: 'fio',
+    email: 'email',
+    phoneNumber: 'phone-number',
+  },
+  buttons: {
+    goToStep2: 'go-to-step-2',
+  },
+  sections: {
+    step1: 'step-1',
+    step2: 'step-2',
+  },
+};
+
 export const COMMON_CONSTANTS = {
   MIN_PASSWORD_LENGTH: 6,
   MAX_SMS_CODE_LENGTH: 8,

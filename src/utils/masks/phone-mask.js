@@ -1,4 +1,4 @@
-export function addPhoneMask() {
+export function addPhoneMask(controls = null) {
   function getInputNumbersValue(input) {
     return input.value.replace(/\D/g, '');
   }
@@ -65,7 +65,15 @@ export function addPhoneMask() {
     }
   }
 
-  document.querySelectorAll('input[type="tel"]').forEach((phoneInput) => {
+  let telControls = [];
+
+  if (!controls) {
+    telControls = document.querySelectorAll('input[type="tel"]');
+  } else {
+    telControls = controls;
+  }
+
+  telControls.forEach((phoneInput) => {
     phoneInput.addEventListener('keydown', onPhoneKeyDown);
     phoneInput.addEventListener('input', onPhoneInput, false);
     phoneInput.addEventListener('paste', onPhonePaste, false);

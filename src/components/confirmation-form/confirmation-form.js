@@ -8,9 +8,9 @@ import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { confirmationResponseHandler } from 'Components/confirmation-form/_confirmation-response-handler';
 import { showError } from 'Utils/errors/show-error';
 import { ERRORS } from 'Constants/errors';
-import { getFormControls } from 'Utils/get-form-controls';
+import { getControls } from 'Utils/get-controls';
 
-const confirmationControls = getFormControls(
+const confirmationControls = getControls(
   document.getElementById(CONFIRMATION_PAGE_CONSTANTS.confirmationForm),
 );
 const codeControl = document.getElementById(

@@ -1,0 +1,39 @@
+extends Layouts/user-account-pages-layout/user-account-pages-layout.pug
+
+block variables
+  - let title = 'New application';
+  - let username = 'ИП Шпутненко Кирилл Сергеевич';
+  - let footer = true;
+  - let pageClassName = 'new-application';
+
+block styles
+  link(href=require('./new-application.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./new-application.js') defer)
+
+block content
+  .container_user-account
+    include Components/form-steps/form-steps.pug
+    +form-steps(['Заведение заявки', 'Загрузка данных', 'Решение'])
+
+    form(id='new-application-form', name='new-application-form')
+
+      include UIKit/form-control/form-control.pug
+      include UIKit/button/button.pug
+
+      .new-application__form-section.new-application__form-section_step-1(id='step-1')
+        .new-application__form-section-wrapper
+          .new-application__controls-group
+            +form-control('text', 'inn', 'Введите ИНН')(required)
+            +form-control('text', 'fio', 'ФИО')(required)
+            +form-control('email', 'email', 'Электронная почта')(required)
+            +form-control('tel', 'phone-number', 'Телефон')(required)
+            +button('go-to-step-2', '', 'button', 'primary', 'Далее')(class='button_wide')
+
+      .new-application__form-section.new-application__form-section_step-2(id='step-2')
+        //.visually-hidden
+        .new-application__form-section-wrapper
+          .new-application__controls-group
+            include UIKit/form-file-upload/form-file-upload.pug
+            +form-file-upload('statement-from-the-bank', ['xl', '1C'], 5, 'Кликните на пустую область или перетащите файл (', true)

@@ -9,6 +9,6 @@ export function registrationResponseHandler(response, controlsArray) {
     window.location.href = `${
       document.getElementById(REGISTRATION_PAGE_CONSTANTS.registrationForm)
         .dataset.locationHref
-    }?signedData=${response.SIGNED_DATA ? response.SIGNED_DATA : ''}`;
+    }&signedData=${response.SIGNED_DATA ? response.SIGNED_DATA : ''}`;
   }
 }

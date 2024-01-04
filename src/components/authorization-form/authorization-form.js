@@ -8,7 +8,7 @@ import { ERRORS } from 'Constants/errors';
 import { resetError } from 'Utils/errors/reset-error';
 import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { authorizationResponseHandler } from 'Components/authorization-form/_authorizationResponseHandler';
-import { getFormControls } from 'Utils/get-form-controls';
+import { getControls } from 'Utils/get-controls';
 
 const authorizationForm = document.getElementById(
   AUTHORIZATION_PAGE_CONSTANTS.authorization_form,
@@ -19,7 +19,7 @@ const phoneControl = document.getElementById(
 const passwordControl = document.getElementById(
   AUTHORIZATION_PAGE_CONSTANTS.passwordControl,
 );
-const authorizationFormControls = getFormControls(authorizationForm);
+const authorizationFormControls = getControls(authorizationForm);
 
 authorizationFormControls.forEach((control) => {
   control.addEventListener('input', () => {

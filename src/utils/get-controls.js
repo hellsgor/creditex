@@ -1,9 +1,9 @@
-export function getFormControls(form) {
+export function getControls(lookingInThisElement) {
   const controlsArray = [];
   const controlsTags = ['input', 'select'];
 
   controlsTags.forEach((tag) => {
-    form.querySelectorAll(tag).forEach((control) => {
+    lookingInThisElement.querySelectorAll(tag).forEach((control) => {
       controlsArray.push(control);
     });
   });

@@ -5,9 +5,9 @@ import { newPasswordValidation } from 'Components/new-password-form/_new-passwor
 import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { newPasswordResponseHandler } from 'Components/new-password-form/_new-password-response-handler';
 import 'UIKit/form-password/form-password';
-import { getFormControls } from 'Utils/get-form-controls';
+import { getControls } from 'Utils/get-controls';
 
-const newPasswordFormControls = getFormControls(
+const newPasswordFormControls = getControls(
   document.getElementById(NEW_PASSWORD_PAGE_CONSTANTS.newPasswordForm),
 );
 
