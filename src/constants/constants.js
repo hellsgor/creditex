@@ -90,6 +90,11 @@ export const NEW_APPLICATION_PAGE = {
     step1: 'step-1',
     step2: 'step-2',
   },
+  steps: {
+    step1: 'form-step-1',
+    step2: 'form-step-2',
+    step3: 'form-step-3',
+  },
 };
 
 export const COMMON_CONSTANTS = {
