@@ -39,5 +39,11 @@ document
       document
         .getElementById(NEW_APPLICATION_PAGE.sections.step2)
         .classList.remove('visually-hidden');
+      document
+        .getElementById(NEW_APPLICATION_PAGE.steps.step1)
+        .classList.remove('form-step_active');
+      document
+        .getElementById(NEW_APPLICATION_PAGE.steps.step2)
+        .classList.add('form-step_active');
     }
   });
