@@ -33,7 +33,42 @@ block content
 
       .new-application__form-section.new-application__form-section_step-2(id='step-2')
         //.visually-hidden
-        .new-application__form-section-wrapper
-          .new-application__controls-group
-            include UIKit/form-file-upload/form-file-upload.pug
-            +form-file-upload('statement-from-the-bank', ['xl', '1C'], 5, 'Кликните на пустую область или перетащите файл (', true)
+        include UIKit/form-file-upload/form-file-upload.pug
+
+        .new-application__ip.visually-hidden
+          .new-application__form-section-wrapper
+            .new-application__group-with-title
+              .new-application__form-section-title
+                h5 Выписка из банка за 24 месяца
+              .new-application__controls-group
+                +form-file-upload('statement-from-the-bank', ['xl', '1C'], 5, 'Кликните на пустую область или перетащите файл (', {
+                  link: '#',
+                  text: 'Инструкция к пользованию'
+                }, false)
+
+        .new-application__ooo
+          .new-application__form-section-wrapper
+            .new-application__group-with-title
+              .new-application__form-section-title
+                h5 Карточка 51 счета
+                p за последние 24 календарных месяца
+              .new-application__controls-group
+                +form-file-upload('card-51', ['xl'], 5, 'Кликните на пустую область или перетащите файл (', {
+                  link: '#',
+                  text: 'Инструкция к пользованию'
+                }, false)
+            .new-application__group-with-title
+              .new-application__form-section-title
+                h5 Бухгалтерская отчетность 1 и 2 формы
+                p за последнюю дату отчетности
+              .new-application__controls-group
+                +form-file-upload('financial-statements', ['PDF'], 5, 'Кликните на пустую область или перетащите файл (', {
+                  link: '#',
+                  text: 'Инструкция к пользованию'
+                }, false)
+
+        .new-application__buttons-group
+          +button('return-to-step-1', '', 'button', 'transparent', 'Назад')(class='button_wide')
+          +button('skip-to-step-3', '', 'button', 'secondary', 'Пропустить')(class='button_wide')
+          +button('go-to-step-3', '', 'button', 'primary', 'Далее')(class='button_wide')
+
