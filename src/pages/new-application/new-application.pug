@@ -24,12 +24,14 @@ block content
 
       .new-application__form-section.new-application__form-section_step-1(id='step-1')
         .new-application__form-section-wrapper
-          .new-application__controls-group
-            +form-control('text', 'inn', 'Введите ИНН')(required)
-            +form-control('text', 'fio', 'ФИО')(required)
-            +form-control('email', 'email', 'Электронная почта')(required)
-            +form-control('tel', 'phone-number', 'Телефон')(required)
-            +button('go-to-step-2', '', 'button', 'primary', 'Далее')(class='button_wide')
+          .new-application__group-with-title
+            .new-application__form-section-title
+            .new-application__controls-group
+              +form-control('text', 'inn', 'Введите ИНН')(required)
+              +form-control('text', 'fio', 'ФИО')(required)
+              +form-control('email', 'email', 'Электронная почта')(required)
+              +form-control('tel', 'phone-number', 'Телефон')(required)
+              +button('go-to-step-2', '', 'button', 'primary', 'Далее')(class='button_wide')
 
       .new-application__form-section.new-application__form-section_step-2(id='step-2')
         //.visually-hidden
@@ -44,7 +46,7 @@ block content
                 +form-file-upload('statement-from-the-bank', ['xl', '1C'], 5, 'Кликните на пустую область или перетащите файл (', {
                   link: '#',
                   text: 'Инструкция к пользованию'
-                }, false)
+                }, false, false)
 
         .new-application__ooo
           .new-application__form-section-wrapper
@@ -56,19 +58,27 @@ block content
                 +form-file-upload('card-51', ['xl'], 5, 'Кликните на пустую область или перетащите файл (', {
                   link: '#',
                   text: 'Инструкция к пользованию'
-                }, false)
+                }, false, false)
             .new-application__group-with-title
               .new-application__form-section-title
                 h5 Бухгалтерская отчетность 1 и 2 формы
                 p за последнюю дату отчетности
               .new-application__controls-group
-                +form-file-upload('financial-statements', ['PDF'], 5, 'Кликните на пустую область или перетащите файл (', {
+                +form-file-upload('financial-statements', ['pdf'], 5, 'Кликните на пустую область или перетащите файл (', {
                   link: '#',
                   text: 'Инструкция к пользованию'
-                }, false)
+                }, false, false)
 
         .new-application__buttons-group
           +button('return-to-step-1', '', 'button', 'transparent', 'Назад')(class='button_wide')
           +button('skip-to-step-3', '', 'button', 'secondary', 'Пропустить')(class='button_wide')
           +button('go-to-step-3', '', 'button', 'primary', 'Далее')(class='button_wide')
+
+      .new-application__form-section.new-application__form-section_step-3(id='step-3')
+        .new-application__form-section-wrapper
+          .new-application__group-with-title
+            .new-application__form-section-title
+              h5 Добавить скан паспорта
+              .new-application__controls-group
+                +form-file-upload('passport', ['jpg', 'jpeg', 'png', 'pdf'], 5, 'Кликните на пустую область или перетащите файл (', '', true, true)
 

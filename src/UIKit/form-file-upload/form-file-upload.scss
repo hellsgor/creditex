@@ -4,7 +4,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  row-gap: 4px;
+  row-gap: 12px;
 
   &__label {
     position: relative;
@@ -32,18 +32,8 @@
       color: $gray-23;
     }
 
-    &_loaded {
-      position: absolute;
-      top: 109px;
-      left: 50%;
-      z-index: 10;
-      transform: translateX(-50%);
-    }
-
     &_hidden {
-      z-index: -10000;
-      visibility: hidden;
-      transform: scale(0);
+      display: none;
     }
   }
 
@@ -82,5 +72,26 @@
     text-decoration: underline;
     line-height: 140%;
     color: $black-1;
+  }
+
+  &__preview {
+    display: flex;
+    overflow-y: scroll;
+    width: 824px;
+    height: 506px;
+    align-items: center;
+    column-gap: 12px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__preview-item {
+    width: 824px;
+    height: 506px;
+    object-fit: contain;
   }
 }

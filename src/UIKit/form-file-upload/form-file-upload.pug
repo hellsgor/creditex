@@ -1,7 +1,17 @@
-mixin form-file-upload(idAndName, fileExtensions, fileSize, emptyText, instruction, isMultiple=false)
+mixin form-file-upload(idAndName, fileExtensions, fileSize, emptyText, instruction, isMultiple, isPreview)
   .form-file-upload
+    .form-file-upload__preview.visually-hidden(id='preview')
+
     label.form-file-upload__label(for=idAndName)(id='drop-zone')
-      input.visually-hidden(id=idAndName, name=idAndName, type='file', multiple=isMultiple, accept=fileExtensions.map(item => `.${item}`).join(', '), size=fileSize * 1024 * 1024, aria-describedby="hint")
+      input.visually-hidden(
+        id=idAndName,
+        name=idAndName,
+        type='file',
+        multiple=isMultiple,
+        accept=fileExtensions.map(item => `.${item}`).join(', '),
+        size=fileSize * 1024 * 1024,
+        data-is-preview=`${isPreview}`,
+        aria-describedby="hint")
       .form-file-upload__icon
         include Components/svg-icon/svg-icon.pug
         +svgIcon('empty-file-control')
