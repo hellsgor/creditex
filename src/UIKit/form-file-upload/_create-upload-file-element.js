@@ -1,4 +1,5 @@
 import { deleteUploadedFile } from 'UIKit/form-file-upload/_delete-uploaded-file';
+import { resetError } from 'Utils/errors/reset-error';
 
 export function createUploadFileElement(
   file,
@@ -21,6 +22,7 @@ export function createUploadFileElement(
   deleteIcon.addEventListener('click', (delEvent) => {
     delEvent.stopPropagation();
     delEvent.preventDefault();
+    resetError(control);
     deleteUploadedFile(control, deleteIcon, isPreview);
   });
   return uploadFileElement;

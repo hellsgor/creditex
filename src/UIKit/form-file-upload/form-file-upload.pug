@@ -2,7 +2,14 @@ mixin form-file-upload(idAndName, fileExtensions, fileSize, emptyText, instructi
   .form-file-upload
     .form-file-upload__preview.visually-hidden(id='preview')
 
-    label.form-file-upload__label(for=idAndName)(id='drop-zone')
+    label.form-file-upload__label(id='drop-zone', for=idAndName + '-buffer')
+      input(
+        hidden,
+        id=idAndName + '-buffer',
+        type='file',
+        multiple=isMultiple,
+        accept=fileExtensions.map(item => `.${item}`).join(', '),
+        size=fileSize * 1024 * 1024,)
       input.visually-hidden(
         id=idAndName,
         name=idAndName,
