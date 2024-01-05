@@ -15,7 +15,7 @@ export function createUploadFileElement(
     file.size
     / 1024
     / 1024
-  ).toFixed(2)} МБ)`;
+  ).toFixed(2)} Мбайт)`;
   const deleteIcon = uploadFileElement.querySelector(
     '.form-file-upload__delete',
   );
