@@ -81,4 +81,10 @@ block content
               h5 Добавить скан паспорта
               .new-application__controls-group
                 +form-file-upload('passport', ['jpg', 'jpeg', 'png', 'pdf'], 5, 'Кликните на пустую область или перетащите файл (', '', true, true)
+                .new-application__controls-group-wrapper
+                  +form-control('text', 'passport-series', 'Серия')(required)
+                  +form-control('text', 'passport-number', 'Номер')(required)
+                  +form-control('text', 'passport-issued', 'Кем выдан')(required)
+                  +form-control('text', 'passport-date', 'Когда выдан')(required, 'data-type="date"')
+                +form-control('text', 'passport-fio', 'ФИО')(required)
 

@@ -5,21 +5,46 @@ import { addPhoneMask } from 'Utils/masks/phone-mask';
 import { resetError } from 'Utils/errors/reset-error';
 import { step1Validation } from './_step-1-validation';
 import 'UIKit/form-file-upload/form-file-upload';
+import { valueMaxLengthMask } from 'Utils/masks/value-max-length-mask';
+import { dateMask } from 'Utils/masks/date-mask';
 
 const form = document.getElementById(NEW_APPLICATION_PAGE.formId);
 
 const controls = getControls(form);
+const numbersOnlyControlsIDs = [
+  NEW_APPLICATION_PAGE.controlsIds.inn,
+  NEW_APPLICATION_PAGE.controlsIds.passportSeries,
+  NEW_APPLICATION_PAGE.controlsIds.passportNumber,
+];
+const maxValueLengthControls = [
+  { id: NEW_APPLICATION_PAGE.controlsIds.inn, max: 12 },
+  { id: NEW_APPLICATION_PAGE.controlsIds.passportSeries, max: 4 },
+  { id: NEW_APPLICATION_PAGE.controlsIds.passportNumber, max: 6 },
+  { id: NEW_APPLICATION_PAGE.controlsIds.fio, max: 200 },
+  { id: NEW_APPLICATION_PAGE.controlsIds.passportFio, max: 200 },
+  { id: NEW_APPLICATION_PAGE.controlsIds.email, max: 50 },
+  { id: NEW_APPLICATION_PAGE.controlsIds.passportIssued, max: 300 },
+  { id: NEW_APPLICATION_PAGE.controlsIds.passportFio, max: 200 },
+];
 
 controls.forEach((control) => {
   control.addEventListener('input', () => {
     resetError(control);
-  });
 
-  if (control.id === NEW_APPLICATION_PAGE.controlsIds.inn) {
-    control.addEventListener('input', () => {
+    if (numbersOnlyControlsIDs.includes(control.id)) {
       numbersOnly(control);
+    }
+
+    maxValueLengthControls.forEach((maxLengthControl) => {
+      if (maxLengthControl.id === control.id) {
+        valueMaxLengthMask(control, maxLengthControl.max);
+      }
     });
-  }
+
+    if (control.dataset.type === 'date') {
+      dateMask(control);
+    }
+  });
 
   if (control.id === NEW_APPLICATION_PAGE.controlsIds.phoneNumber) {
     addPhoneMask([control]);

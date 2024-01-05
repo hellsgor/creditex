@@ -59,6 +59,20 @@
     row-gap: 24px;
   }
 
+  &__controls-group-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+    row-gap: 24px;
+
+    & > * {
+      width: calc((100% - 16px) / 2);
+    }
+  }
+
   &__form-section-title {
     display: flex;
     width: 100%;
