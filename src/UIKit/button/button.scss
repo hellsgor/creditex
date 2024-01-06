@@ -59,6 +59,14 @@
     }
   }
 
+  &_tertiary {
+    min-height: unset;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-color: $gray-25;
+    background-color: $white-1;
+    color: $gray-24;
+  }
 
   &_transparent {
     @include transparent-button;
