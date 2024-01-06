@@ -24,8 +24,8 @@ block content
 
       .new-application__form-section.new-application__form-section_step-1(id='step-1')
         .new-application__form-section-wrapper
-          .new-application__group-with-title
-            .new-application__form-section-title
+          .new-application__form-block
+            .new-application__form-block-title
             .new-application__controls-group
               +form-control('text', 'inn', 'Введите ИНН')(required)
               +form-control('text', 'fio', 'ФИО')(required)
@@ -39,8 +39,8 @@ block content
 
         .new-application__ip.visually-hidden
           .new-application__form-section-wrapper
-            .new-application__group-with-title
-              .new-application__form-section-title
+            .new-application__form-block
+              .new-application__form-block-title
                 h5 Выписка из банка за 24 месяца
               .new-application__controls-group
                 +form-file-upload('statement-from-the-bank', ['xl', '1C'], 5, 'Кликните на пустую область или перетащите файл (', {
@@ -50,8 +50,8 @@ block content
 
         .new-application__ooo
           .new-application__form-section-wrapper
-            .new-application__group-with-title
-              .new-application__form-section-title
+            .new-application__form-block
+              .new-application__form-block-title
                 h5 Карточка 51 счета
                 p за последние 24 календарных месяца
               .new-application__controls-group
@@ -59,8 +59,8 @@ block content
                   link: '#',
                   text: 'Инструкция к пользованию'
                 }, false, false)
-            .new-application__group-with-title
-              .new-application__form-section-title
+            .new-application__form-block
+              .new-application__form-block-title
                 h5 Бухгалтерская отчетность 1 и 2 формы
                 p за последнюю дату отчетности
               .new-application__controls-group
@@ -76,15 +76,20 @@ block content
 
       .new-application__form-section.new-application__form-section_step-3(id='step-3')
         .new-application__form-section-wrapper
-          .new-application__group-with-title
-            .new-application__form-section-title
+          .new-application__form-block
+            .new-application__form-block-title
               h5 Добавить скан паспорта
-              .new-application__controls-group
-                +form-file-upload('passport', ['jpg', 'jpeg', 'png', 'pdf'], 5, 'Кликните на пустую область или перетащите файл (', '', true, true)
-                .new-application__controls-group-wrapper
-                  +form-control('text', 'passport-series', 'Серия')(required)
-                  +form-control('text', 'passport-number', 'Номер')(required)
-                  +form-control('text', 'passport-issued', 'Кем выдан')(required)
-                  +form-control('text', 'passport-date', 'Когда выдан')(required, 'data-type="date"')
-                +form-control('text', 'passport-fio', 'ФИО')(required)
-
+            .new-application__controls-group
+              +form-file-upload('passport', ['jpg', 'jpeg', 'png', 'pdf'], 5, 'Кликните на пустую область или перетащите файл (', '', true, true)
+              .new-application__controls-group-wrapper
+                +form-control('text', 'passport-series', 'Серия')(required)
+                +form-control('text', 'passport-number', 'Номер')(required)
+                +form-control('text', 'passport-issued', 'Кем выдан')(required)
+                +form-control('text', 'passport-date', 'Когда выдан')(required, 'data-type="date"')
+              +form-control('text', 'passport-fio', 'ФИО')(required)
+          .new-application__form-block
+            .new-application__form-block-title
+              h5 Загрузка банковской выписки
+            .new-application__controls-group
+              +button('send-from-bank-client', '#', '', 'tertiary', 'Отправить из клиента банка')(class='button_wide')
+              +form-file-upload('bank-statement', ['jpg', 'jpeg', 'png', 'pdf'], 5, 'Кликните на пустую область или перетащите файл (', '', false, false)

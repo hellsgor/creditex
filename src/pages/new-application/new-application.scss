@@ -40,14 +40,15 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
-    row-gap: 32px;
+    row-gap: 48px;
   }
 
-  &__group-with-title {
+  &__form-block {
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
+    row-gap: 32px;
   }
 
   &__controls-group {
@@ -73,10 +74,9 @@
     }
   }
 
-  &__form-section-title {
+  &__form-block-title {
     display: flex;
     width: 100%;
-    margin-bottom: 16px;
     flex-direction: column;
     align-items: center;
     row-gap: 4px;

@@ -91,12 +91,14 @@ export const NEW_APPLICATION_PAGE = {
     passportIssued: 'passport-issued',
     passportDate: 'passport-date',
     passportFio: 'passport-fio',
+    bankStatement: 'bank-statement',
   },
   buttons: {
     goToStep2: 'go-to-step-2',
     returnToStep1: 'return-to-step-1',
     skipToStep3: 'skip-to-step-3',
     goToStep3: 'go-to-step-3',
+    sendFromBankClient: 'send-from-bank-client',
   },
   sections: {
     step1: 'step-1',
