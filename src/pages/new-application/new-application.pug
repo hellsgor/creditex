@@ -124,3 +124,23 @@ block content
                 two: 'года',
                 five: 'лет'
               }, 3, false, true)
+          .new-application__form-block
+            .new-application__form-block-title
+              h5 Выберите тип обеспечения
+            .new-application__controls-group
+              include UIKit/form-radio/form-radio.pug
+              +form-radio('collateral-type', [
+                {
+                  id: 'without-collateral',
+                  checked: false,
+                  text: 'Без залога'
+                },
+                {
+                  id: 'with-collateral',
+                  checked: true,
+                  text: 'С залогом'
+                },
+              ])
+        .new-application__buttons-group
+          +button('return-to-step-2', '', 'button', 'transparent', 'Назад')(class='button_wide')
+          +button('submit-form', '', 'submit', 'primary', 'Далее')(class='button_wide', form='new-application-form', formaction='/local/ajax/appAdd.php/')

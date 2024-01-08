@@ -32,7 +32,11 @@
 
     &_step-3 {
       .new-application__controls-group {
-        max-width: 824px;
+        max-width: 651px;
+      }
+
+      .new-application__buttons-group {
+        margin-top: 50px;
       }
     }
   }
@@ -63,6 +67,10 @@
 
     &_custom {
       max-width: unset !important;
+
+      .form-radio {
+        margin-bottom: 10px;
+      }
 
       .range {
         max-width: 651px;
