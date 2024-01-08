@@ -143,3 +143,10 @@ block content
         .new-application__buttons-group
           +button('return-to-step-2', '', 'button', 'transparent', 'Назад')(class='button_wide')
           +button('submit-form', '', 'submit', 'primary', 'Далее')(class='button_wide', form='new-application-form', formaction='/local/ajax/appAdd.php/')
+
+      .new-application__form-section.new-application__form-section_step-thankth(id='thanks-step')
+        .new-application__form-block-title
+          h4 Спасибо!
+          h5 Ваша заявка на рассмотрении
+          p Свяжемся с Вами в течении 3 часов
+        +button('go-to-lk', './brokerLk.html', '', 'primary', 'В личный кабинет')(class='button_wide')
