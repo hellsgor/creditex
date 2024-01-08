@@ -53,17 +53,15 @@
           <div class="section__wrapper offer__wrapper">
             <div class="offer__left-wrapper">
               <div class="offer__text">
-                <h1 class="offer__title">Сервис привлечения финансовых продуктов для бизнеса</h1>
-                <p class="offer__description">Подберем для Вас предложение с высокой вероятность одобрения</p>
+                <h1>Сервис привлечения финансовых продуктов для бизнеса</h1>
+                <p>Подберем для Вас предложение с высокой вероятность одобрения</p>
               </div>
-              <div class="offer__controls">
-                <!--TODO: сделать переход на страницу регистрации и добавление номера телефона в соответствующий контрол-->
-                <!--TODO: сделать отправку номера телефона на сервер-->
+              <form class="offer__controls" name="offer-form" method="GET" action="./">
                 <div class="form-control"><input class="form-control__input offer__input" type="tel" id="offer-phone"
                     name="offer-phone" placeholder="Телефон"><span class="error form-control__error">Текст ошибки</span>
-                </div><button class="button button_primary offer__button" type="button"
-                  id="offer-button">Начать</button>
-              </div>
+                </div><button class="button button_primary offer__button" type="submit" id="offer-button"
+                  data-reg-page-path="./registration.html">Начать</button>
+              </form>
             </div>
             <div class="offer__right-wrapper">
               <div class="offer__round"></div>
@@ -375,9 +373,11 @@
         </div>
       </section>
       <section class="section register-oneself">
-        <div class="container section__wrapper register-oneself__wrapper"><a
-            class="button button_primary register-oneself__button" id="register-oneself-button"
-            href="./registration.html">Зарегистрироваться</a></div>
+        <div class="container">
+          <div class="section__wrapper register-oneself__wrapper"><a
+              class="button button_primary register-oneself__button" id="register-oneself-button"
+              href="./registration.html">Зарегистрироваться</a></div>
+        </div>
       </section>
     </main>
     <footer class="footer">
