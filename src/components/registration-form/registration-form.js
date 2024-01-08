@@ -16,6 +16,10 @@ const phoneControl = document.getElementById(
   REGISTRATION_PAGE_CONSTANTS.registrationFormControls.phoneControl,
 );
 
+const registrationForm = document.getElementById(
+  REGISTRATION_PAGE_CONSTANTS.registrationForm,
+);
+
 addPhoneMask();
 phoneControl.value = new URLSearchParams(window.location.search).get(
   'phoneNumber',
@@ -41,12 +45,13 @@ registrationControls.forEach((control) => {
 
 document
   .getElementById(REGISTRATION_PAGE_CONSTANTS.comeInButton)
-  .addEventListener('click', () => {
+  .addEventListener('click', (event) => {
+    event.preventDefault();
     if (registrationValidation(registrationControls)) {
       handleFormSubmit(
-        registrationControls,
-        'POST',
-        '/auth/?register=yes',
+        registrationForm,
+        registrationForm.method,
+        registrationForm.action,
         registrationResponseHandler,
         true,
       );
