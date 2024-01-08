@@ -100,6 +100,7 @@ export const NEW_APPLICATION_PAGE = {
     goToStep3: 'go-to-step-3',
     returnToStep2: 'return-to-step-2',
     sendFromBankClient: 'send-from-bank-client',
+    submit: 'submit-form',
   },
   sections: {
     step1: 'step-1',

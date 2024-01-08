@@ -18,7 +18,7 @@ mixin form-file-upload(idAndName, fileExtensions, fileSize, emptyText, instructi
         accept=fileExtensions.map(item => `.${item}`).join(', '),
         size=fileSize * 1024 * 1024,
         data-is-preview=`${isPreview}`,
-        aria-describedby="hint")
+        aria-describedby="hint")&attributes(attributes)
       .form-file-upload__icon
         include Components/svg-icon/svg-icon.pug
         +svgIcon('empty-file-control')

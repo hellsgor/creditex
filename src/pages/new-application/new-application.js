@@ -9,6 +9,7 @@ import { valueMaxLengthMask } from 'Utils/masks/value-max-length-mask';
 import { dateMask } from 'Utils/masks/date-mask';
 import 'UIKit/form-range/form-range';
 import { toggleSteps } from './_toggle-steps';
+import { step3Validation } from './_step-3-validation';
 
 const form = document.getElementById(NEW_APPLICATION_PAGE.formId);
 const controls = getControls(form);
@@ -88,3 +89,18 @@ document
     toggleSteps(2, 3);
   });
 });
+
+document
+  .getElementById(NEW_APPLICATION_PAGE.buttons.submit)
+  .addEventListener('click', (event) => {
+    event.preventDefault();
+    const isStep1Valid = step1Validation(
+      getControls(document.getElementById(NEW_APPLICATION_PAGE.sections.step1)),
+    );
+    const isStep3Valid = step3Validation(
+      getControls(document.getElementById(NEW_APPLICATION_PAGE.sections.step3)),
+    );
+
+    console.log(`isStep1Valid = ${isStep1Valid}`);
+    console.log(`isStep3Valid = ${isStep3Valid}`);
+  });

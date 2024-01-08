@@ -79,7 +79,7 @@ block content
             .new-application__form-block-title
               h5 Добавить скан паспорта
             .new-application__controls-group
-              +form-file-upload('passport', ['jpg', 'jpeg', 'png', 'pdf'], 5, 'Кликните на пустую область или перетащите файл (', '', true, true)
+              +form-file-upload('passport', ['jpg', 'jpeg', 'png', 'pdf'], 5, 'Кликните на пустую область или перетащите файл (', '', true, true)(required)
               .new-application__controls-group-wrapper
                 +form-control('text', 'passport-series', 'Серия')(required)
                 +form-control('text', 'passport-number', 'Номер')(required)
@@ -98,7 +98,7 @@ block content
             .new-application__controls-group.new-application__controls-group_custom
               include UIKit/form-radio/form-radio.pug
               +form-radio('credit-type', [
-                {id: 'circulating', checked: true, text: 'Оборотный кредит'},
+                {id: 'circulating', checked: false, text: 'Оборотный кредит'},
                 {
                   id: 'investment',
                   checked: false,
@@ -111,7 +111,7 @@ block content
                 },
                 {id: 'mortgage', checked: false, text: 'Ипотека'},
                 {id: 'leasing', checked: false, text: 'Лизинг'},
-              ])
+              ])(required)
               include UIKit/form-range/form-range.pug
               +form-range('security-amount', 'Выберите или введите сумму залога', 500000, 27000000, {
                 one: '₽',
@@ -136,15 +136,15 @@ block content
                 },
                 {
                   id: 'with-collateral',
-                  checked: true,
+                  checked: false,
                   text: 'С залогом'
                 },
-              ])
+              ])(required)
         .new-application__buttons-group
           +button('return-to-step-2', '', 'button', 'transparent', 'Назад')(class='button_wide')
           +button('submit-form', '', 'submit', 'primary', 'Далее')(class='button_wide', form='new-application-form', formaction='/local/ajax/appAdd.php/')
 
-      .new-application__form-section.new-application__form-section_step-thankth(id='thanks-step')
+      .new-application__form-section.new-application__form-section_step-thankth.visually-hidden(id='thanks-step')
         .new-application__form-block-title
           h4 Спасибо!
           h5 Ваша заявка на рассмотрении

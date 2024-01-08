@@ -1,5 +1,6 @@
 mixin form-radio(idAndName, radioItems)
   .form-radio(id=idAndName)
     each item in radioItems
-      input(type='radio', id=item.id, name=idAndName, checked=item.checked, value=item.id)
+      input(type='radio', id=item.id, name=idAndName, checked=item.checked, value=item.id)&attributes(
+        attributes)
       label(for=item.id) #{item.text}
