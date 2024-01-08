@@ -39,6 +39,10 @@
     flex: 0 0 582px;
     flex-direction: column;
     row-gap: 20px;
+
+    @media (max-width: 1680px) {
+      flex-basis: 400px;
+    }
   }
 
   &__left-column-paragraphs {

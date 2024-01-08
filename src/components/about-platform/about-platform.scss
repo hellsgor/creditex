@@ -1,15 +1,19 @@
 .about-platform {
   &__wrapper {
-    background-color: $white-1;
-    padding: 147px 141px 192px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 37px;
     position: relative;
+    display: flex;
+    padding: 147px 141px 192px;
+    flex-direction: column;
+    background-color: $white-1;
+    row-gap: 37px;
 
     h2,
     p {
       max-width: 749px;
+
+      @media (max-width: 1700px) {
+        max-width: 600px;
+      }
     }
 
     h2 {
@@ -24,14 +28,14 @@
 
   &__circle {
     position: absolute;
+    top: -191px;
+    right: -103px;
+    display: flex;
     width: 895px;
     height: 895px;
-    background-color: $yellow-green-1;
     border-radius: 100%;
-    right: -103px;
-    top: -191px;
-    display: flex;
     align-items: center;
+    background-color: $yellow-green-1;
   }
 
   &__card {

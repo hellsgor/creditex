@@ -8,7 +8,7 @@
     row-gap: 40px;
 
     &_smaller-paddings {
-      padding: 58px 181px 40px;
+      padding: 58px 58px 40px;
 
       .advantages-numbers__advantages p {
         font-size: 24px;
@@ -17,14 +17,14 @@
     }
 
     &_biggest-paddings {
-      padding: 75px 277px;
+      padding: 75px 75px;
     }
   }
 
   &__advantages {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     column-gap: 40px;
 
     span {
