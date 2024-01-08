@@ -46,4 +46,27 @@ ranges.forEach((range) => {
       changeAfterChangingControlValue(inputRange, inputText, customTrack);
     });
   });
+
+  inputText.addEventListener('focus', () => {
+    inputText.value = inputRange.value;
+  });
+
+  ['change', 'blur', 'keydown'].forEach((eventType) => {
+    inputText.addEventListener(eventType, (event) => {
+      if (
+        (event.type === 'change' || event.type === 'blur')
+        && Number(inputText.value) <= Number(inputRange.max)
+        && Number(inputText.value) >= Number(inputRange.min)
+      ) {
+        if (event.type === 'change') {
+          inputRange.value = inputText.value;
+          inputRange.dispatchEvent(new Event('input'));
+        }
+
+        if (event.type === 'blur') {
+          changeAfterChangingControlValue(inputRange, inputText, customTrack);
+        }
+      }
+    });
+  });
 });

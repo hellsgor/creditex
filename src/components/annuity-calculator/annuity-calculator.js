@@ -1,8 +1,6 @@
 import { preparePaymentControlValue } from 'Components/annuity-calculator/_prepare-payment-control-value';
 import { REGULAR_ANNUITY_CALCULATOR_CONSTANTS } from 'Constants/constants';
 import { renderGraph } from 'Components/annuity-calculator/_renderGraph';
-import { getRange } from 'Components/annuity-calculator/_get-range';
-import { convertControlValue } from 'Components/annuity-calculator/_convert-control-value';
 
 const graphBlock = document.getElementById(
   REGULAR_ANNUITY_CALCULATOR_CONSTANTS.GRAPH_BLOCK_ID,
@@ -40,12 +38,20 @@ renderGraph(
 [textControls.amountTextControl, textControls.termTextControl].forEach(
   (control) => {
     if (control) {
-      control.addEventListener('focus', (event) => {
-        const { target } = event;
-        const range = getRange(target, controls);
+      ['focus', 'blur'].forEach((eventType) => {
+        control.addEventListener(eventType, (event) => {
+          if (event.type === 'focus') {
+            controls.paymentControl.value = '';
+          }
 
-        target.value = range.value;
-        controls.paymentControl.value = '';
+          if (event.type === 'blur') {
+            preparePaymentControlValue(
+              controls.amountControl,
+              controls.paymentControl,
+              controls.termControl,
+            );
+          }
+        });
       });
     }
   },
@@ -53,9 +59,13 @@ renderGraph(
 
 [textControls.amountTextControl, textControls.termTextControl].forEach(
   (control) => {
-    if (control) {
-      convertControlValue(control, controls);
-    }
+    control.addEventListener('change', () => {
+      preparePaymentControlValue(
+        controls.amountControl,
+        controls.paymentControl,
+        controls.termControl,
+      );
+    });
   },
 );
 
