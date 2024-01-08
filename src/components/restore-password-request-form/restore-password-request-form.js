@@ -6,12 +6,9 @@ import { showError } from 'Utils/errors/show-error';
 import { ERRORS } from 'Constants/errors';
 import { phoneValidation } from 'Utils/validation/phone-validation';
 import { restorePasswordRequestHandler } from 'Components/restore-password-request-form/_restore-password-request-handler';
-import { getControls } from 'Utils/get-controls';
 
-const restorePasswordRequestFormControls = getControls(
-  document.getElementById(
-    RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS.restorePasswordRequestForm,
-  ),
+const restorePasswordRequestForm = document.getElementById(
+  RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS.restorePasswordRequestForm,
 );
 const phoneNumberControl = document.getElementById(
   RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS.restorePasswordRequestFormControls
@@ -28,12 +25,14 @@ document
   .getElementById(
     RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS.restorePasswordRequestForwardButton,
   )
-  .addEventListener('click', () => {
+  .addEventListener('click', (event) => {
+    event.preventDefault();
+
     if (phoneValidation(phoneNumberControl)) {
       handleFormSubmit(
-        restorePasswordRequestFormControls,
-        'POST',
-        '/auth/?forgot_password=yes',
+        restorePasswordRequestForm,
+        restorePasswordRequestForm.method,
+        restorePasswordRequestForm.action,
         restorePasswordRequestHandler,
         true,
       );
