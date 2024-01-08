@@ -8,13 +8,13 @@ import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { confirmationResponseHandler } from 'Components/confirmation-form/_confirmation-response-handler';
 import { showError } from 'Utils/errors/show-error';
 import { ERRORS } from 'Constants/errors';
-import { getControls } from 'Utils/get-controls';
 
-const confirmationControls = getControls(
-  document.getElementById(CONFIRMATION_PAGE_CONSTANTS.confirmationForm),
-);
 const codeControl = document.getElementById(
   CONFIRMATION_PAGE_CONSTANTS.confirmationFormControls.confirmationCodeControl,
+);
+
+const confirmationForm = document.getElementById(
+  CONFIRMATION_PAGE_CONSTANTS.confirmationForm,
 );
 
 codeControl.addEventListener('input', () => {
@@ -24,15 +24,17 @@ codeControl.addEventListener('input', () => {
 
 document
   .getElementById(CONFIRMATION_PAGE_CONSTANTS.confirmationForwardButton)
-  .addEventListener('click', () => {
+  .addEventListener('click', (event) => {
+    event.preventDefault();
+
     if (
       codeControl.value.length
       && codeControl.value.length <= COMMON_CONSTANTS.MAX_SMS_CODE_LENGTH
     ) {
       handleFormSubmit(
-        confirmationControls,
-        'POST',
-        '/auth/?register=yes',
+        confirmationForm,
+        confirmationForm.method,
+        confirmationForm.action,
         confirmationResponseHandler,
         true,
       );
