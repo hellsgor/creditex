@@ -40,7 +40,8 @@ Freelance project
 * Пустой ЛК - https://hellsgor.github.io/creditex/emptyLk.html;
 * Брокер, сделки - https://hellsgor.github.io/creditex/brokerLk.html;
 * Персональные данные
-  пользователя - https://hellsgor.github.io/creditex/personalData.html.
+  пользователя - https://hellsgor.github.io/creditex/personalData.html;
+* Новая заявка - https://hellsgor.github.io/creditex/newApplication.html.
 
 ### Служебные страницы:
 
