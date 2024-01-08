@@ -7,9 +7,10 @@ import { newPasswordResponseHandler } from 'Components/new-password-form/_new-pa
 import 'UIKit/form-password/form-password';
 import { getControls } from 'Utils/get-controls';
 
-const newPasswordFormControls = getControls(
-  document.getElementById(NEW_PASSWORD_PAGE_CONSTANTS.newPasswordForm),
+const newPasswordForm = document.getElementById(
+  NEW_PASSWORD_PAGE_CONSTANTS.newPasswordForm,
 );
+const newPasswordFormControls = getControls(newPasswordForm);
 
 newPasswordFormControls.forEach((control) => {
   control.addEventListener('input', (event) => {
@@ -26,12 +27,13 @@ newPasswordFormControls.forEach((control) => {
 
 document
   .getElementById(NEW_PASSWORD_PAGE_CONSTANTS.newPasswordChangeButton)
-  .addEventListener('click', () => {
+  .addEventListener('click', (event) => {
+    event.preventDefault();
     if (newPasswordValidation(newPasswordFormControls)) {
       handleFormSubmit(
-        newPasswordFormControls,
-        'POST',
-        '/auth/?change_password=yes',
+        newPasswordForm,
+        newPasswordForm.method,
+        newPasswordForm.action,
         newPasswordResponseHandler,
         true,
       );
