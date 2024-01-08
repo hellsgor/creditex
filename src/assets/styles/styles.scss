@@ -6,6 +6,10 @@
 @import 'Styles/_mixins.scss';
 @import 'Styles/_typography.scss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 100%;
   padding: 0 70px;

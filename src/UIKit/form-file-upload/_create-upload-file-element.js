@@ -1,11 +1,21 @@
 import { deleteUploadedFile } from 'UIKit/form-file-upload/_delete-uploaded-file';
 import { resetError } from 'Utils/errors/reset-error';
 
-export function createUploadFileElement(control, dropZone, fileName) {
-  const uploadFileElement = dropZone
-    .querySelector('#loaded-file-template')
-    .content.cloneNode(true);
-  uploadFileElement.querySelector('p').textContent = fileName;
+export function createUploadFileElement(
+  file,
+  uploadFileTemplate,
+  control,
+  isPreview,
+) {
+  const uploadFileElement = uploadFileTemplate.content
+    .cloneNode(true)
+    .querySelector('.form-file-upload__loaded-file');
+  uploadFileElement.dataset.fileName = `${file.name}`;
+  uploadFileElement.querySelector('p').textContent = `${file.name} (${(
+    file.size
+    / 1024
+    / 1024
+  ).toFixed(2)} Мбайт)`;
   const deleteIcon = uploadFileElement.querySelector(
     '.form-file-upload__delete',
   );
@@ -13,7 +23,7 @@ export function createUploadFileElement(control, dropZone, fileName) {
     delEvent.stopPropagation();
     delEvent.preventDefault();
     resetError(control);
-    deleteUploadedFile(control, dropZone, deleteIcon);
+    deleteUploadedFile(control, deleteIcon, isPreview);
   });
   return uploadFileElement;
 }

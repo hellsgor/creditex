@@ -1,5 +1,6 @@
 .range {
   display: flex;
+  width: 100%;
   flex-direction: column;
   row-gap: 9px;
 
@@ -17,6 +18,7 @@
 
   input[type='text'] {
     z-index: 1;
+    width: 100%;
     background-color: $gray-4;
     color: $gray-1;
     cursor: unset;
