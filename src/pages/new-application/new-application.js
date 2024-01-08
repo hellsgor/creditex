@@ -64,6 +64,23 @@ document
   });
 
 [
+  document.getElementById(NEW_APPLICATION_PAGE.buttons.returnToStep1),
+  document.getElementById(NEW_APPLICATION_PAGE.buttons.returnToStep2),
+].forEach((returnBtn) => {
+  returnBtn.addEventListener('click', () => {
+    let from = 3;
+    let to = 2;
+
+    if (returnBtn.id === NEW_APPLICATION_PAGE.buttons.returnToStep1) {
+      from = 2;
+      to = 1;
+    }
+
+    toggleSteps(from, to);
+  });
+});
+
+[
   document.getElementById(NEW_APPLICATION_PAGE.buttons.skipToStep3),
   document.getElementById(NEW_APPLICATION_PAGE.buttons.goToStep3),
 ].forEach((btn) => {
