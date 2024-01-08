@@ -3,6 +3,8 @@
 @import 'UIKit/form-control/form-control.scss';
 @import 'UIKit/button/button.scss';
 @import 'UIKit/form-file-upload/form-file-upload.scss';
+@import 'UIKit/form-radio/form-radio.scss';
+@import 'UIKit/form-range/form-range.scss';
 
 @import 'Components/form-steps/form-steps.scss';
 
@@ -58,6 +60,14 @@
     align-items: center;
     justify-content: center;
     row-gap: 24px;
+
+    &_custom {
+      max-width: unset !important;
+
+      .range {
+        max-width: 651px;
+      }
+    }
   }
 
   &__controls-group-wrapper {

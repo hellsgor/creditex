@@ -7,6 +7,7 @@ import { step1Validation } from './_step-1-validation';
 import 'UIKit/form-file-upload/form-file-upload';
 import { valueMaxLengthMask } from 'Utils/masks/value-max-length-mask';
 import { dateMask } from 'Utils/masks/date-mask';
+import 'UIKit/form-range/form-range';
 
 const form = document.getElementById(NEW_APPLICATION_PAGE.formId);
 
