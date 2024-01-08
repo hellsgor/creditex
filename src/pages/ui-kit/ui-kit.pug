@@ -61,3 +61,11 @@ block content
       +deal-status('Одобрено', 'green')
       +deal-status('Активная', 'blue')
       +deal-status('Отклонённая', 'red')
+
+    h2 Radio
+    include UIKit/form-radio/form-radio.pug
+    +form-radio('test-radio', [
+      {id: 'first', checked: false, text: 'First'},
+      {id: 'second', checked: true, text: 'Second'},
+      {id: 'third', checked: false, text: 'Third'},
+    ])
