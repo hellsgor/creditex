@@ -33,8 +33,7 @@ block content
               +form-control('tel', 'phone-number', 'Телефон')(required)
               +button('go-to-step-2', '', 'button', 'primary', 'Далее')(class='button_wide')
 
-      .new-application__form-section.new-application__form-section_step-2(id='step-2')
-        //.visually-hidden
+      .new-application__form-section.new-application__form-section_step-2.visually-hidden(id='step-2')
         include UIKit/form-file-upload/form-file-upload.pug
 
         .new-application__ip.visually-hidden
@@ -74,7 +73,7 @@ block content
           +button('skip-to-step-3', '', 'button', 'secondary', 'Пропустить')(class='button_wide')
           +button('go-to-step-3', '', 'button', 'primary', 'Далее')(class='button_wide')
 
-      .new-application__form-section.new-application__form-section_step-3(id='step-3')
+      .new-application__form-section.new-application__form-section_step-3.visually-hidden(id='step-3')
         .new-application__form-section-wrapper
           .new-application__form-block
             .new-application__form-block-title

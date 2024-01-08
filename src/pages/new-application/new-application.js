@@ -8,9 +8,9 @@ import 'UIKit/form-file-upload/form-file-upload';
 import { valueMaxLengthMask } from 'Utils/masks/value-max-length-mask';
 import { dateMask } from 'Utils/masks/date-mask';
 import 'UIKit/form-range/form-range';
+import { toggleSteps } from './_toggle-steps';
 
 const form = document.getElementById(NEW_APPLICATION_PAGE.formId);
-
 const controls = getControls(form);
 const numbersOnlyControlsIDs = [
   NEW_APPLICATION_PAGE.controlsIds.inn,
@@ -59,17 +59,15 @@ document
       getControls(document.getElementById(NEW_APPLICATION_PAGE.sections.step1)),
     );
     if (isStep1Valid) {
-      document
-        .getElementById(NEW_APPLICATION_PAGE.sections.step1)
-        .classList.add('visually-hidden');
-      document
-        .getElementById(NEW_APPLICATION_PAGE.sections.step2)
-        .classList.remove('visually-hidden');
-      document
-        .getElementById(NEW_APPLICATION_PAGE.steps.step1)
-        .classList.remove('form-step_active');
-      document
-        .getElementById(NEW_APPLICATION_PAGE.steps.step2)
-        .classList.add('form-step_active');
+      toggleSteps(1, 2);
     }
   });
+
+[
+  document.getElementById(NEW_APPLICATION_PAGE.buttons.skipToStep3),
+  document.getElementById(NEW_APPLICATION_PAGE.buttons.goToStep3),
+].forEach((btn) => {
+  btn.addEventListener('click', () => {
+    toggleSteps(2, 3);
+  });
+});

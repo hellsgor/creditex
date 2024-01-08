@@ -104,6 +104,7 @@ export const NEW_APPLICATION_PAGE = {
     step1: 'step-1',
     step2: 'step-2',
     step3: 'step-3',
+    stepThanks: 'thanks-step',
   },
   steps: {
     step1: 'form-step-1',
