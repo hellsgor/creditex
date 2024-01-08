@@ -11,11 +11,11 @@ section.partner-calculator
             two: '₽',
             five: '₽'
           }, 2000000)
-          .partner-calculator__action
+          form.partner-calculator__action(name='partner-calc-form', method='GET', action='./')
             include UIKit/form-control/form-control.pug
             +form-control('tel', 'partner-calc-phone', 'Телефон')(class='partner-calculator__action-input')
             include UIKit/button/button.pug
-            +button('partner-calc-button', '', 'button', 'primary', 'Начать')(class='partner-calculator__action-button', data-reg-page-path='./registration.html')
+            +button('partner-calc-button', '', 'submit', 'primary', 'Начать')(class='partner-calculator__action-button', data-reg-page-path='./registration.html')
         .partner-calculator__result
           span Ожидаемый доход
           span(id='partner-calc-result')

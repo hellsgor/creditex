@@ -5,10 +5,10 @@ import { serializeData } from 'Utils/handle-form-submit/_serialize-data';
 import { ERRORS } from 'Constants/errors';
 
 export function goToRegistrationPage(offerControl, pagePath) {
+  const form = offerControl.closest('form');
   if (offerControl.value) {
     if (phoneValidation(offerControl)) {
-      // TODO: актуализировать URL в sendData при передаче в back
-      sendData(serializeData([offerControl]), './', false);
+      sendData(form.method, serializeData([offerControl]), form.action, false);
       window.location.href = `${pagePath}?phoneNumber=${encodeURIComponent(
         offerControl.value.toString().replace(/[^\d]/g, ''),
       )}`;
