@@ -18,6 +18,8 @@ export function setStep(sectionNumber, thisIsSteps = false) {
         return NEW_APPLICATION_PAGE.steps.step1;
       case 2:
         return NEW_APPLICATION_PAGE.steps.step2;
+      case 3:
+        return NEW_APPLICATION_PAGE.steps.step2;
       default:
         return NEW_APPLICATION_PAGE.steps.step3;
     }

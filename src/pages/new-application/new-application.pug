@@ -17,7 +17,7 @@ block content
     include Components/form-steps/form-steps.pug
     +form-steps(['Заведение заявки', 'Загрузка данных', 'Решение'])
 
-    form(id='new-application-form', name='new-application-form')
+    form(id='new-application-form', name='new-application-form', action='./moc/new-application-response-success.json', method='GET')
 
       include UIKit/form-control/form-control.pug
       include UIKit/button/button.pug
@@ -142,7 +142,7 @@ block content
               ])(required)
         .new-application__buttons-group
           +button('return-to-step-2', '', 'button', 'transparent', 'Назад')(class='button_wide')
-          +button('submit-form', '', 'submit', 'primary', 'Далее')(class='button_wide', form='new-application-form', formaction='/local/ajax/appAdd.php/')
+          +button('submit-form', '', 'submit', 'primary', 'Далее')(class='button_wide', form='new-application-form')
 
       .new-application__form-section.new-application__form-section_step-thankth.visually-hidden(id='thanks-step')
         .new-application__form-block-title

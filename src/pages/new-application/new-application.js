@@ -3,16 +3,21 @@ import { getControls } from 'Utils/get-controls';
 import { numbersOnly } from 'Utils/masks/numbers-only-mask';
 import { addPhoneMask } from 'Utils/masks/phone-mask';
 import { resetError } from 'Utils/errors/reset-error';
-import { step1Validation } from './_step-1-validation';
+import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import 'UIKit/form-file-upload/form-file-upload';
 import { valueMaxLengthMask } from 'Utils/masks/value-max-length-mask';
 import { dateMask } from 'Utils/masks/date-mask';
+import { step1Validation } from './_step-1-validation';
 import 'UIKit/form-range/form-range';
 import { toggleSteps } from './_toggle-steps';
 import { step3Validation } from './_step-3-validation';
+import { newApplicationResponseHandler } from './_new-application-response-handler';
 
 const form = document.getElementById(NEW_APPLICATION_PAGE.formId);
 const controls = getControls(form);
+const formSubmitButton = document.getElementById(
+  NEW_APPLICATION_PAGE.buttons.submit,
+);
 const numbersOnlyControlsIDs = [
   NEW_APPLICATION_PAGE.controlsIds.inn,
   NEW_APPLICATION_PAGE.controlsIds.passportSeries,
@@ -90,22 +95,28 @@ document
   });
 });
 
-document
-  .getElementById(NEW_APPLICATION_PAGE.buttons.submit)
-  .addEventListener('click', (event) => {
-    event.preventDefault();
-    const isStep1Valid = step1Validation(
-      getControls(document.getElementById(NEW_APPLICATION_PAGE.sections.step1)),
-    );
-    const isStep3Valid = step3Validation([
-      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passport),
-      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportSeries),
-      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportNumber),
-      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportDate),
-      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportIssued),
-      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportFio),
-    ]);
+formSubmitButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  const isStep1Valid = step1Validation(
+    getControls(document.getElementById(NEW_APPLICATION_PAGE.sections.step1)),
+  );
+  const isStep3Valid = step3Validation([
+    document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passport),
+    document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportSeries),
+    document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportNumber),
+    document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportDate),
+    document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportIssued),
+    document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportFio),
+  ]);
 
-    console.log(`isStep1Valid = ${isStep1Valid}`);
-    console.log(`isStep3Valid = ${isStep3Valid}`);
-  });
+  if (isStep1Valid && isStep3Valid) {
+    handleFormSubmit(
+      form,
+      form.method,
+      form.action,
+      newApplicationResponseHandler,
+      true,
+      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.collateralType),
+    );
+  }
+});
