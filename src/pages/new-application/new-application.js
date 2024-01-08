@@ -97,9 +97,14 @@ document
     const isStep1Valid = step1Validation(
       getControls(document.getElementById(NEW_APPLICATION_PAGE.sections.step1)),
     );
-    const isStep3Valid = step3Validation(
-      getControls(document.getElementById(NEW_APPLICATION_PAGE.sections.step3)),
-    );
+    const isStep3Valid = step3Validation([
+      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passport),
+      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportSeries),
+      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportNumber),
+      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportDate),
+      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportIssued),
+      document.getElementById(NEW_APPLICATION_PAGE.controlsIds.passportFio),
+    ]);
 
     console.log(`isStep1Valid = ${isStep1Valid}`);
     console.log(`isStep3Valid = ${isStep3Valid}`);

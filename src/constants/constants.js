@@ -92,6 +92,8 @@ export const NEW_APPLICATION_PAGE = {
     passportDate: 'passport-date',
     passportFio: 'passport-fio',
     bankStatement: 'bank-statement',
+    creditType: 'credit-type',
+    collateralType: 'collateral-type',
   },
   buttons: {
     goToStep2: 'go-to-step-2',

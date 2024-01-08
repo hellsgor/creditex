@@ -3,6 +3,7 @@ import { showError } from 'Utils/errors/show-error';
 import { ERRORS } from 'Constants/errors';
 import { RegExps } from 'Constants/reg-exps';
 import { resetError } from 'Utils/errors/reset-error';
+import { radioValidation } from 'Utils/validation/radio-validation';
 
 export function step3Validation(controls) {
   let isValid = true;
@@ -53,6 +54,18 @@ export function step3Validation(controls) {
       }
     }
   });
+
+  [
+    document.getElementById(NEW_APPLICATION_PAGE.controlsIds.creditType),
+    document.getElementById(NEW_APPLICATION_PAGE.controlsIds.collateralType),
+  ]
+    .map((radio) => radioValidation(radio))
+    .forEach((validationResult) => {
+      if (!validationResult.isChecked) {
+        showError(ERRORS.CE014(), validationResult.control);
+        isValid = false;
+      }
+    });
 
   return isValid;
 }
