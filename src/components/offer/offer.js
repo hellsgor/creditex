@@ -8,7 +8,7 @@ const offerButton = document.getElementById('offer-button');
 addPhoneMask();
 offerButton.addEventListener('click', (event) => {
   event.preventDefault();
-  goToRegistrationPage(offerControl);
+  goToRegistrationPage(offerControl, offerButton.dataset.regPagePath);
 });
 
 offerControl.addEventListener('input', () => {

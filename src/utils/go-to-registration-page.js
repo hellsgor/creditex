@@ -4,18 +4,18 @@ import { sendData } from 'Utils/handle-form-submit/_send-data';
 import { serializeData } from 'Utils/handle-form-submit/_serialize-data';
 import { ERRORS } from 'Constants/errors';
 
-export function goToRegistrationPage(offerControl) {
+export function goToRegistrationPage(offerControl, pagePath) {
   if (offerControl.value) {
     if (phoneValidation(offerControl)) {
       // TODO: актуализировать URL в sendData при передаче в back
       sendData(serializeData([offerControl]), './', false);
-      window.location.href = `./registration.html?phoneNumber=${encodeURIComponent(
+      window.location.href = `${pagePath}?phoneNumber=${encodeURIComponent(
         offerControl.value.toString().replace(/[^\d]/g, ''),
       )}`;
     } else {
       showError(ERRORS.CE001(), offerControl);
     }
   } else {
-    window.location.href = './registration.html';
+    window.location.href = pagePath;
   }
 }

@@ -23,7 +23,7 @@ result.textContent = getCalculationResult(averageLoanAmount, borrowers);
 
 calcButton.addEventListener('click', (event) => {
   event.preventDefault();
-  goToRegistrationPage(calcPhoneControl);
+  goToRegistrationPage(calcPhoneControl, calcButton.dataset.regPagePath);
 });
 
 calcPhoneControl.addEventListener('input', () => {
