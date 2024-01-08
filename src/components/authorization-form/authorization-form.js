@@ -46,8 +46,8 @@ document
     if (phoneValidation(phoneControl) && passwordValidation(passwordControl)) {
       handleFormSubmit(
         authorizationForm,
-        'POST',
-        '/auth/',
+        authorizationForm.method,
+        authorizationForm.action,
         authorizationResponseHandler,
         true,
         passwordControl,
