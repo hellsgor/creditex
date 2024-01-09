@@ -1,10 +1,10 @@
 export async function sendData(method, data, url, waitResponse) {
   let responseJSON = null;
   const params = {
-    method,
+    method: method.toUpperCase(),
   };
 
-  if (method === 'POST') {
+  if (params.method === 'POST') {
     params.body = data;
   }
 
