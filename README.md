@@ -42,7 +42,8 @@ Freelance project
 * Брокер, сделки - https://hellsgor.github.io/creditex/brokerLk.html;
 * Персональные данные
   пользователя - https://hellsgor.github.io/creditex/personalData.html;
-* Новая заявка - https://hellsgor.github.io/creditex/newApplication.html.
+* Новая заявка - https://hellsgor.github.io/creditex/newApplication.html;
+* Новый пароль - https://hellsgor.github.io/creditex/newPassword.html.
 
 ### Служебные страницы:
 
