@@ -61,14 +61,14 @@ export const RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS = {
     'restore-password-request-forward-button',
 };
 
-export const NEW_PASSWORD_PAGE_CONSTANTS = {
-  newPasswordForm: 'new-password-form',
-  newPasswordFormControls: {
-    newPasswordConfirmationCodeControl: 'new-password-confirmation-code',
-    newPasswordControl: 'new-password-password',
-    newPasswordRepeatControl: 'new-password-password-repeat',
+export const RECOVERY_PASSWORD_PAGE_CONSTANTS = {
+  recoveryPasswordForm: 'recovery-password-form',
+  recoveryPasswordFormControls: {
+    confirmationCodeControl: 'recovery-password-confirmation-code',
+    newPasswordControl: 'recovery-password-password',
+    newPasswordRepeatControl: 'recovery-password-password-repeat',
   },
-  newPasswordChangeButton: 'new-password-change-password-button',
+  newPasswordChangeButton: 'recovery-password-change-password-button',
 };
 
 export const BROKER_LK_PAGE = {

@@ -33,7 +33,8 @@ Freelance project
 * Подтверждение по SMS - https://hellsgor.github.io/creditex/confirmation.html;
 * Запрос восстановления
   пароля - https://hellsgor.github.io/creditex/restorePasswordPhoneNumberRequest.html;
-* Новый пароль - https://hellsgor.github.io/creditex/newPassword.html.
+* Восстановление
+  пароля - https://hellsgor.github.io/creditex/recoveryPassword.html.
 
 ### Личный кабинет:
 

@@ -17,7 +17,7 @@ module.exports = {
     confirmation: './src/pages/confirmation/confirmation.pug',
     restorePasswordPhoneNumberRequest:
       './src/pages/restore-password-request/restore-password-request.pug',
-    newPassword: './src/pages/new-password/new-password.pug',
+    recoveryPassword: './src/pages/recovery-password/recovery-password.pug',
     emptyLk: './src/pages/empty-lk/empty-lk.pug',
     brokerLk: './src/pages/broker-lk/broker-lk.pug',
     personalData: './src/pages/personal-data/personal-data.pug',
