@@ -1,1 +1,1 @@
-import 'Components/new-password-form/new-password-form';
+import 'Components/new-password-block/new-password-block';
