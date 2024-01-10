@@ -9,16 +9,48 @@ export function step1Validation(controls) {
   let isValid = true;
   controls.forEach((control) => {
     resetError(control);
-    if (
-      control.id === NEW_APPLICATION_PAGE.controlsIds.fio
-      && !control.value.trim()
-    ) {
-      isValid = false;
-      showError(ERRORS.CE002(), control);
+    if (control.id === NEW_APPLICATION_PAGE.controlsIds.userType) {
+      if (!control.value) {
+        isValid = false;
+        showError(ERRORS.CE014(), control);
+      }
+    }
+    if (control.id === NEW_APPLICATION_PAGE.controlsIds.fio) {
+      if (!control.value.trim()) {
+        isValid = false;
+        showError(ERRORS.CE002(), control);
+      }
     }
 
     if (control.id === NEW_APPLICATION_PAGE.controlsIds.inn) {
-      if (!(control.value.length === 10 || control.value.length === 12)) {
+      if (!control.value.trim()) {
+        isValid = false;
+        showError(ERRORS.CE013(), control);
+      }
+
+      if (
+        control.value
+        && !document.getElementById(NEW_APPLICATION_PAGE.controlsIds.userType)
+          .value
+      ) {
+        isValid = false;
+        showError(ERRORS.CE015(), control);
+      }
+
+      if (
+        document.getElementById(NEW_APPLICATION_PAGE.controlsIds.userType)
+          .value === 'ooo'
+        && control.value.length !== 10
+      ) {
+        isValid = false;
+        showError(ERRORS.CE002(), control);
+      }
+
+      if (
+        document.getElementById(NEW_APPLICATION_PAGE.controlsIds.userType)
+          .value === 'ip'
+        && control.value.length !== 12
+      ) {
         isValid = false;
         showError(ERRORS.CE002(), control);
       }

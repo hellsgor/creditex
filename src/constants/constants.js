@@ -78,6 +78,7 @@ export const BROKER_LK_PAGE = {
 export const NEW_APPLICATION_PAGE = {
   formId: 'new-application-form',
   controlsIds: {
+    userType: 'user-type',
     inn: 'inn',
     fio: 'fio',
     email: 'email',
