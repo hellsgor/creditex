@@ -27,6 +27,11 @@ block content
           .new-application__form-block
             .new-application__form-block-title
             .new-application__controls-group
+              include UIKit/form-select/form-select.pug
+              +form-select('user-type', [{
+                text: 'ИП',
+                value: 'ip'
+              }, {text: 'ООО', value: 'ooo'}], 'Выберите форму регистрации')
               +form-control('text', 'inn', 'Введите ИНН')(required)
               +form-control('text', 'fio', 'ФИО')(required)
               +form-control('email', 'email', 'Электронная почта')(required)
