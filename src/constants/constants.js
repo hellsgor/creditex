@@ -61,14 +61,14 @@ export const RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS = {
     'restore-password-request-forward-button',
 };
 
-export const NEW_PASSWORD_PAGE_CONSTANTS = {
-  newPasswordForm: 'new-password-form',
-  newPasswordFormControls: {
-    newPasswordConfirmationCodeControl: 'new-password-confirmation-code',
-    newPasswordControl: 'new-password-password',
-    newPasswordRepeatControl: 'new-password-password-repeat',
+export const RECOVERY_PASSWORD_PAGE_CONSTANTS = {
+  recoveryPasswordForm: 'recovery-password-form',
+  recoveryPasswordFormControls: {
+    confirmationCodeControl: 'recovery-password-confirmation-code',
+    newPasswordControl: 'recovery-password-password',
+    newPasswordRepeatControl: 'recovery-password-password-repeat',
   },
-  newPasswordChangeButton: 'new-password-change-password-button',
+  newPasswordChangeButton: 'recovery-password-change-password-button',
 };
 
 export const BROKER_LK_PAGE = {
@@ -78,6 +78,7 @@ export const BROKER_LK_PAGE = {
 export const NEW_APPLICATION_PAGE = {
   formId: 'new-application-form',
   controlsIds: {
+    userType: 'user-type',
     inn: 'inn',
     fio: 'fio',
     email: 'email',
@@ -115,6 +116,19 @@ export const NEW_APPLICATION_PAGE = {
     step2: 'form-step-2',
     step3: 'form-step-3',
   },
+};
+
+export const NEW_PASSWORD_PAGE = {
+  form: 'new-password-form',
+  controls: {
+    password: 'new-password-password',
+    repeat: 'new-password-password-repeat',
+  },
+  buttons: {
+    back: 'new-password-back-button',
+    submit: 'new-password-submit-button',
+  },
+  message: 'new-password-message-text',
 };
 
 export const COMMON_CONSTANTS = {

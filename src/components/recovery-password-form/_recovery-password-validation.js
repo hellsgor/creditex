@@ -1,18 +1,18 @@
 import {
   COMMON_CONSTANTS,
-  NEW_PASSWORD_PAGE_CONSTANTS,
+  RECOVERY_PASSWORD_PAGE_CONSTANTS,
 } from 'Constants/constants';
 import { showError } from 'Utils/errors/show-error';
 import { ERRORS } from 'Constants/errors';
 import { passwordValidation } from 'Utils/validation/password-validation';
 
-export function newPasswordValidation(controls) {
+export function recoveryPasswordValidation(controls) {
   let isValid = true;
   controls.forEach((control) => {
     if (
       control.id
-      === NEW_PASSWORD_PAGE_CONSTANTS.newPasswordFormControls
-        .newPasswordConfirmationCodeControl
+      === RECOVERY_PASSWORD_PAGE_CONSTANTS.recoveryPasswordFormControls
+        .confirmationCodeControl
     ) {
       if (
         !(
@@ -31,7 +31,8 @@ export function newPasswordValidation(controls) {
 
     if (
       control.id
-      === NEW_PASSWORD_PAGE_CONSTANTS.newPasswordFormControls.newPasswordControl
+      === RECOVERY_PASSWORD_PAGE_CONSTANTS.recoveryPasswordFormControls
+        .newPasswordControl
     ) {
       if (!passwordValidation(control)) {
         isValid = false;
@@ -41,13 +42,14 @@ export function newPasswordValidation(controls) {
 
     if (
       control.id
-      === NEW_PASSWORD_PAGE_CONSTANTS.newPasswordFormControls
+      === RECOVERY_PASSWORD_PAGE_CONSTANTS.recoveryPasswordFormControls
         .newPasswordRepeatControl
     ) {
       if (
         control.value
         !== document.getElementById(
-          NEW_PASSWORD_PAGE_CONSTANTS.newPasswordFormControls.newPasswordControl,
+          RECOVERY_PASSWORD_PAGE_CONSTANTS.recoveryPasswordFormControls
+            .newPasswordControl,
         ).value
       ) {
         isValid = false;

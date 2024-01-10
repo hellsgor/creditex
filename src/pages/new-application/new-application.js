@@ -12,6 +12,7 @@ import 'UIKit/form-range/form-range';
 import { toggleSteps } from './_toggle-steps';
 import { step3Validation } from './_step-3-validation';
 import { newApplicationResponseHandler } from './_new-application-response-handler';
+import { setStep2Section } from './set-step-2-section';
 
 const form = document.getElementById(NEW_APPLICATION_PAGE.formId);
 const controls = getControls(form);
@@ -55,6 +56,12 @@ controls.forEach((control) => {
 
   if (control.id === NEW_APPLICATION_PAGE.controlsIds.phoneNumber) {
     addPhoneMask([control]);
+  }
+
+  if (control.id === NEW_APPLICATION_PAGE.controlsIds.userType) {
+    control.addEventListener('change', () => {
+      setStep2Section(control);
+    });
   }
 });
 
