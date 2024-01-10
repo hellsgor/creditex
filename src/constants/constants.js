@@ -118,6 +118,18 @@ export const NEW_APPLICATION_PAGE = {
   },
 };
 
+export const NEW_PASSWORD_PAGE = {
+  form: 'new-password-form',
+  controls: {
+    password: 'new-password-password',
+    repeat: 'new-password-password-repeat',
+  },
+  buttons: {
+    back: 'new-password-back-button',
+    submit: 'new-password-submit-button',
+  },
+};
+
 export const COMMON_CONSTANTS = {
   MIN_PASSWORD_LENGTH: 6,
   MAX_SMS_CODE_LENGTH: 8,
