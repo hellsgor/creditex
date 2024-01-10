@@ -60,6 +60,13 @@
               <div class="new-application__form-block">
                 <div class="new-application__form-block-title"></div>
                 <div class="new-application__controls-group">
+                  <div class="form-select"><select id="user-type" name="user-type">
+                      <option disabled selected value="">Выберите форму регистрации</option>
+                      <option value="ip">ИП</option>
+                      <option value="ooo">ООО</option>
+                    </select>
+                    <div class="form-select__arrow"></div><span class="error form-select__error">Текст ошибки</span>
+                  </div>
                   <div class="form-control"><input class="form-control__input" type="text" id="inn" name="inn"
                       placeholder="Введите ИНН" required><span class="error form-control__error">Текст ошибки</span>
                   </div>
@@ -493,7 +500,7 @@
             </svg></div><span class="user-account-footer__email">some@gmail.com</span>
         </a></div>
     </footer>
-    <script src="assets/js/736.js"
+    <script src="assets/js/427.js"
       defer></script><script src="assets/js/new-application.js"
       defer></script>
   </body>
