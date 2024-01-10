@@ -22,6 +22,7 @@ module.exports = {
     brokerLk: './src/pages/broker-lk/broker-lk.pug',
     personalData: './src/pages/personal-data/personal-data.pug',
     newApplication: './src/pages/new-application/new-application.pug',
+    newPassword: './src/pages/new-password/new-password.pug',
   },
   output: {
     filename: 'assets/js/[name].js',
