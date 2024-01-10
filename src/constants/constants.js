@@ -128,6 +128,7 @@ export const NEW_PASSWORD_PAGE = {
     back: 'new-password-back-button',
     submit: 'new-password-submit-button',
   },
+  message: 'new-password-message-text',
 };
 
 export const COMMON_CONSTANTS = {
