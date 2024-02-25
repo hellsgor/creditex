@@ -63,13 +63,13 @@ class InitSlider {
 
 const listSliders = [
   {
-    classSlider: '.section.card-issued-block',
+    classSlider: '.card-issued-block',
     settingsSlider: {
       spaceBetween: 16,
       grabCursor: true,
-      slidesPerView: 7,
+      slidesPerView: 'auto',
       slidesOffsetBefore: 70,
-      slidesOffsetAfter: -32,
+      slidesOffsetAfter: 70,
     },
   },
 ];

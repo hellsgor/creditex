@@ -1,7 +1,7 @@
 section.section.card-issued-block.swiper
   .card-issued-block__wrapper.swiper-wrapper
     - var n = 0;
-    while n < 10
+    while n < 20
       include Components/card-issued/card-issued.pug
       +card-issued()(class='swiper-slide')
       - n++
