@@ -4,3 +4,6 @@ import 'Components/card-issued/card-issued';
 import 'UIKit/form-range/form-range';
 
 import 'Components/partner-calculator/partner-calculator';
+import { initSliders } from 'Utils/slider';
+
+initSliders();

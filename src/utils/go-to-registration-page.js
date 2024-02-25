@@ -9,7 +9,7 @@ export function goToRegistrationPage(offerControl, pagePath) {
   if (offerControl.value) {
     if (phoneValidation(offerControl)) {
       sendData(form.method, serializeData([offerControl]), form.action, false);
-      window.location.href = `${pagePath}?phoneNumber=${encodeURIComponent(
+      window.location.href = `${pagePath}&phoneNumber=${encodeURIComponent(
         offerControl.value.toString().replace(/[^\d]/g, ''),
       )}`;
     } else {

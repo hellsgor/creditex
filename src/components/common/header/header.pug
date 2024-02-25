@@ -7,18 +7,18 @@ mixin header()
         nav.header__main-menu
           ul.header__main-menu-list
             include Components/common/header/_main-menu-item.pug
-            +main-manu-item({
+            +main-menu-item({
               text: 'Главная',
               href: './',
-            }, 'header', '')(class = 'header__main-menu-item-link')
-            +main-manu-item({
+            }, 'header', '/')(class = 'header__main-menu-item-link')
+            +main-menu-item({
               text: 'Предпринимателям',
               href: './entrepreneur.html'
-            }, 'header', 'entrepreneur')(class = 'header__main-menu-item-link')
-            +main-manu-item({
+            }, 'header', '/entrepreneur')(class = 'header__main-menu-item-link')
+            +main-menu-item({
               text: 'Партнерам',
               href: './partners.html'
-            }, 'header', 'partners')(class = 'header__main-menu-item-link')
+            }, 'header', '/partners')(class = 'header__main-menu-item-link')
         .header__lk-buttons
           include UIKit/button/button.pug
           +button('header-lk-entry', './authorization.html', '', 'link', 'Войти', 'entry')(class='header__lk-entry-button')

@@ -1,6 +1,6 @@
 .card-issued {
-  flex: 0 0 250px;
   position: relative;
+  flex: 0 0 250px;
 
   &__image {
     width: 250px;
@@ -19,9 +19,9 @@
     color: $black-1;
 
     h4 {
+      margin-bottom: 24px;
       font-size: 23px;
       line-height: 25px;
-      margin-bottom: 24px;
     }
 
     p {
@@ -32,8 +32,8 @@
   }
 
   &__numbers {
-    text-transform: uppercase;
     margin-bottom: 8px;
+    text-transform: uppercase;
 
     span {
       &:first-child {
@@ -51,25 +51,30 @@
 
       &:last-child {
         &::before {
-          content: ' ';
           font-family: sans-serif;
+          content: ' ';
         }
       }
     }
   }
 
   &__date {
-    padding: 4px 8px;
-    border-radius: $radius-small;
-    background-color: $black-1;
-    color: $white-1;
-    font-size: 12px;
     position: absolute;
     top: 12px;
     right: 10px;
+    padding: 4px 8px;
+    border-radius: $radius-small;
+    font-size: 12px;
+    background-color: $black-1;
+    color: $white-1;
 
     &::before {
       content: 'Выдан: ';
     }
   }
+
+  //
+  //&:first-child {
+  //  padding-left: 70px;
+  //}
 }

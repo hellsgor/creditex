@@ -6,7 +6,6 @@ import { ERRORS } from 'Constants/errors';
 import { resetError } from 'Utils/errors/reset-error';
 import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { newPasswordResponseHandler } from 'Components/new-password-block/_new-password-response-handler';
-import { newPasswordHideMessage } from 'Components/new-password-block/_new-password-hide-message';
 
 const newPasswordForm = document.getElementById(NEW_PASSWORD_PAGE.form);
 const controls = getControls(newPasswordForm);
@@ -15,8 +14,6 @@ document
   .getElementById(NEW_PASSWORD_PAGE.buttons.submit)
   .addEventListener('click', (event) => {
     event.preventDefault();
-
-    newPasswordHideMessage();
 
     let isValid = true;
     controls.forEach((control) => {
