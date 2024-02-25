@@ -14,11 +14,11 @@ mixin header()
             +main-menu-item({
               text: 'Предпринимателям',
               href: './entrepreneur.html'
-            }, 'header', 'entrepreneur')(class = 'header__main-menu-item-link')
+            }, 'header', '/entrepreneur')(class = 'header__main-menu-item-link')
             +main-menu-item({
               text: 'Партнерам',
               href: './partners.html'
-            }, 'header', 'partners')(class = 'header__main-menu-item-link')
+            }, 'header', '/partners')(class = 'header__main-menu-item-link')
         .header__lk-buttons
           include UIKit/button/button.pug
           +button('header-lk-entry', './authorization.html', '', 'link', 'Войти', 'entry')(class='header__lk-entry-button')
