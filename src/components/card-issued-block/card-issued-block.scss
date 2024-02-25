@@ -1,16 +1,7 @@
-@import 'src/components/card-issued/card-issued.scss';
+@import 'Components/card-issued/card-issued.scss';
+@import '/node_modules/swiper/swiper.css';
 
 .card-issued-block {
-  display: flex;
-  column-gap: 16px;
-  padding: 24px 16px;
-  overflow-x: auto;
+  padding: 24px 0;
   background-color: $white-1;
-
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
